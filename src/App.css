@@ -1,0 +1,98 @@
+:root {
+  --top-offset: 46px;
+}
+* {
+  outline: none;
+}
+.mt-6, .my-6 {
+  margin-top: 6rem !important;
+}
+.mb-6, .my-6 {
+  margin-bottom: 6rem !important;
+}
+hr {
+  border-width: 1px;
+  border-color: var(--primary); 
+}
+body {
+  line-height: 1.25rem;
+}
+.header,
+.key-attributes .section .title,
+.key-attributes .section .list .item {
+  margin-bottom: 1rem;
+}
+.header {
+  /* background: var(--indigo);
+  background: -moz-linear-gradient(-45deg, var(--indigo) 0%, var(--pink) 100%);
+  background: -webkit-linear-gradient(-45deg, var(--indigo) 0%,var(--pink) 100%);
+  background: linear-gradient(135deg, var(--indigo) 0%,var(--pink) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='var(--indigo)', endColorstr='var(--pink)',GradientType=1 ); */
+}
+.section-wrapper {
+  position: relative;
+}
+.section-wrapper .heading-wrapper {
+  position: sticky;
+  background-color: #fff;
+  top: var(--top-offset);
+  z-index: 2;
+}
+.section-wrapper .heading-wrapper:after {
+  content: "";
+  height: 25px;
+  width: 100%;
+  left: 0;
+  position: absolute;
+  background: -moz-linear-gradient(top, rgba(255,255,255,1) 25%, rgba(255,255,255,0) 100%);
+  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 25%,rgba(255,255,255,0) 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 25%,rgba(255,255,255,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
+}
+.section-wrapper .heading-wrapper .heading {
+}
+.key-attributes .section .title {
+  line-height: 1.75rem;
+}
+.key-attributes .section .list {
+  -webkit-padding-start: 1.5rem;
+}
+.key-attributes .nav-tabs {
+  position: sticky;
+  background-color: #fff;
+  top: calc(var(--top-offset)*2);
+  z-index: 2;
+  display: block;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.key-attributes .nav .nav-item{
+  display: inline-block;
+  float: none;
+}
+.navbar {
+  justify-content: space-between;
+  align-items: baseline;
+}
+.navbar-toggler {
+  border: none;
+  padding: 0;
+}
+.nav-pills .nav-link,
+.nav-tabs .nav-link {
+    cursor: pointer;
+}
+.nav-tabs .nav-link:hover:not(.active) {
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  background-color: #eee;
+}
+.footer {
+  background-color: #ededed;
+  opacity: .95;
+}
+.react-icons {
+  vertical-align: middle;
+}

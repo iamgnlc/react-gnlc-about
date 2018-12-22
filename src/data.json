@@ -1,5 +1,6 @@
 {
   "contactDetails": {
+    "id": "contact",
     "title": "Contact details",
     "fullName": "Gianluca Agnocchetti",
     "jobRole": "Senior full stack web developer",
@@ -28,10 +29,12 @@
     ]
   },
   "profile": {
+    "id": "profile",
     "title": "Profile",
-    "description": "Senior developer with over 15 years track record of delivering complex, high value, scalable web sites/applications, custom data tracking and analysis solutions, and quick problem solving. Passionate about coding and always up to date about latest technology, focused on performance and security, to implement the optimal solution. Generous in sharing technical knowledge with the team, and always opened to a different point of view. Keen to spend time learning and improving my skill at 360 round."
+    "description": "Senior full stack developer with over 15 years track record of delivering complex, high value, scalable web sites/applications, custom data tracking and analysis solutions, and quick problem solving. Passionate about coding and always up to date about latest technology, focused on performance and security, to implement the optimal solution. Generous in sharing technical knowledge with the team, and always opened to a different point of view. Keen to spend time learning and improving my skill at 360 round."
   },
   "keyAttributes": {
+    "id": "key-attributes",
     "title": "Key attributes and skills",
     "paragraphs": [
       {
@@ -152,6 +155,7 @@
     ]
   },
   "spokenLanguages": {
+    "id": "languages",
     "title": "Spoken languages",
     "headRow": [
       "Italian<br/><small>(Mother language)</small>",
@@ -176,6 +180,7 @@
     }
   },
   "personalInfo": {
+    "id": "personal-info",
     "title": "Personal informations",
     "dob": "February 18<sup>th</sup> 1980",
     "gender": "Male",
@@ -185,6 +190,7 @@
     "nino": "SN 47 81 35 D"
   },
   "activities": {
+    "id": "activities",
     "title": "Activities and interests",
     "description": "During my spare time I enjoy relaxing and going out with friends. I also enjoy cooking and listening and collecting old vinyls, but my primary interest is music production. I love to spend my free time to create original tracks or remixing famous songs, using various devices, and keep them in tempo sync for a unique and original mixdown. Also, I love to keep myself updated about latest professional audio software and techniques."
   }

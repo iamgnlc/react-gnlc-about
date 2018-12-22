@@ -1,17 +1,22 @@
 import React, { Component } from 'react'
 import jsonData from './data.json'
-import './globals.js'
+import './global.js'
 
-import {Helmet} from 'react-helmet'
+import { Helmet } from 'react-helmet'
+
+import "./global.js"
 
 import {
   Container,
 } from 'reactstrap'
 
-import 'bootswatch/dist/cosmo/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import 'animate.css/animate.min.css'
 import './App.css'
 
+import ScrollableAnchor from 'react-scrollable-anchor'
+
+import Hero from './Components/Hero.js'
 import Header from './Components/Header.js'
 import Footer from './Components/Footer.js'
 import ContactDetails from './Components/ContactDetails.js'
@@ -26,7 +31,7 @@ class App extends Component {
 
     this.state = {
       data: jsonData,
-      dropdown: this.buildDropdown(jsonData),
+      menu: this.buildMenu(jsonData),
     }
   }
 
@@ -39,61 +44,70 @@ class App extends Component {
       .replace(/-+$/, '');            // Trim - from end of text
   }
 
-  buildDropdown = (jsondata) => {
-    let dropdown = []
+  buildMenu = (jsondata) => {
+    let menu = []
     Object.keys(jsondata).map(section => {
-      dropdown.push({ ref: this.slugify(jsondata[section].title), name: jsondata[section].title })
+      menu.push({ ref: jsondata[section].id, name: jsondata[section].id})
       return true
     })
-    return dropdown
+    return menu
   }
 
   render() {
     return (
     
-      <div className="mt-6">
+      <div id="App">
         <Helmet>
           <meta charSet="utf-8" />
-          <title>Curriculum Vitae of Gianluca Agnocchetti</title>
+          <title>{global.title}</title>
+          <meta name="author" content={global.meta.author} />
+          <meta name="description" content={global.meta.description} />
+          <meta name="robots" content="noindex" />
         </Helmet>
 
-        <Header data={this.state.data.contactDetails} dropdown={this.state.dropdown} />
+        <Header menu={this.state.menu} />
 
-        <Container className="mb-5">
+        <Container className="my-5 pt-3 animated fadeIn">
 
-          <ContactDetails
-            ref={(section) => { this.state.dropdown[0].ref = section }}
-            data={this.state.data.contactDetails} />
+          <ScrollableAnchor id={this.state.data.contactDetails.id}>
+            <ContactDetails
+              data={this.state.data.contactDetails} />
+          </ScrollableAnchor>
 
-          <hr className="animated zoomIn"/>
+          <hr/>
 
-          <Description
-            ref={(section) => { this.state.dropdown[1].ref = section }}
-            data={this.state.data.profile} />
+          <ScrollableAnchor id={this.state.data.profile.id}>
+            <Description
+              data={this.state.data.profile} />
+          </ScrollableAnchor>
 
-          <hr className="animated zoomIn"/>
+          <hr/>
 
-          <KeyAttributes
-            ref={(section) => { this.state.dropdown[2].ref = section }}
-            data={this.state.data.keyAttributes} />
+          <ScrollableAnchor id={this.state.data.keyAttributes.id}>
+            <KeyAttributes
+              data={this.state.data.keyAttributes} />
+          </ScrollableAnchor>
 
-          <hr className="animated zoomIn"/>
+          <hr/>
 
-          <SpokenLanguages
-            ref={(section) => { this.state.dropdown[3].ref = section }}
-            data={this.state.data.spokenLanguages} />
+          <ScrollableAnchor id={this.state.data.spokenLanguages.id}>
+            <SpokenLanguages
+              data={this.state.data.spokenLanguages} />
+          </ScrollableAnchor>
 
-          <hr className="animated zoomIn"/>
+          <hr/>
 
-          <PersonalInfo
-            ref={(section) => { this.state.dropdown[4].ref = section }}
-            data={this.state.data.personalInfo} />
+          <ScrollableAnchor id={this.state.data.personalInfo.id}>
+            <PersonalInfo
+              data={this.state.data.personalInfo} />
+          </ScrollableAnchor>
 
-          <hr className="animated zoomIn"/>
+          <hr/>
 
-          <Description
-            ref={(section) => { this.state.dropdown[5].ref = section }}
-            data={this.state.data.activities} />
+          <ScrollableAnchor id={this.state.data.activities.id}>
+            <Description
+              data={this.state.data.activities} />
+          </ScrollableAnchor>
 
         </Container>
 

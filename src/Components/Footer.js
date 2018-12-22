@@ -17,7 +17,7 @@ const Footer = React.memo(function Footer(props) {
         <span className="text-muted text-center text-md-left animated fadeInUp">&copy; {(new Date()).getFullYear()} &mdash; Made with <FaHeart className="text-danger animated pulse infinite"/> and React by <b>GNLC</b></span>
       </IconContext.Provider>
       
-      <span className="d-block">
+      <span className="d-block animated fadeInUp">
         (<a href={global.githubRepo} target="_blank" rel="noopener noreferrer">{global.githubRepo}</a>)
       </span>
     </Navbar>

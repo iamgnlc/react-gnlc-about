@@ -16,7 +16,7 @@ import './App.css'
 
 import ScrollableAnchor from 'react-scrollable-anchor'
 
-import Hero from './Components/Hero.js'
+// import Hero from './Components/Hero.js'
 import Header from './Components/Header.js'
 import Footer from './Components/Footer.js'
 import ContactDetails from './Components/ContactDetails.js'
@@ -33,15 +33,6 @@ class App extends Component {
       data: jsonData,
       menu: this.buildMenu(jsonData),
     }
-  }
-
-  slugify = (text) => {
-    return text.toString().toLowerCase()
-      .replace(/\s+/g, '-')           // Replace spaces with -
-      .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
-      .replace(/\-\-+/g, '-')         // Replace multiple - with single -
-      .replace(/^-+/, '')             // Trim - from start of text
-      .replace(/-+$/, '');            // Trim - from end of text
   }
 
   buildMenu = (jsondata) => {

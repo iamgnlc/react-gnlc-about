@@ -8,7 +8,7 @@ import {
 
 const List = React.memo(function List(props) {
   return(
-    <ul className="list mb-4">
+    <ul className="list pl-0 pl-sm-4 mb-4">
       {props.data.map((paragraph, key) => {
         return <li key={key} className="item text-justify mb-3" dangerouslySetInnerHTML={{ __html: paragraph }}></li>
       })}
@@ -26,7 +26,7 @@ class KeyAttributes extends Component {
         {this.props.data.paragraphs.map((section, key) => {
           return(
             <React.Fragment key={key}>
-              <Col xs={12} sm={3}><h5 className="title text-sm-right" dangerouslySetInnerHTML={{ __html: section.title }}></h5></Col>
+              <Col xs={12} sm={3} className="title-wrapper"><h5 className="title text-center text-sm-right" dangerouslySetInnerHTML={{ __html: section.title }}></h5></Col>
               <Col xs={12} sm={9}>
                 <List data={section.list} />
               </Col>

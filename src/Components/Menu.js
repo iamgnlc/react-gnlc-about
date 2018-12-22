@@ -15,7 +15,7 @@ const Menu = React.memo(function Menu(props) {
       {props.menu.map((entry, key) => {
         return(
           <NavItem key={key}>
-            <NavLink href={`#`+ entry.ref}>~/{entry.name}</NavLink>
+            <NavLink href={`#`+ entry.ref} onClick={props.callback}>~/{entry.name}</NavLink>
           </NavItem>
         )
       })}
@@ -25,6 +25,7 @@ const Menu = React.memo(function Menu(props) {
 
 Menu.propTypes = {
   menu: PropTypes.array,
+  callback: PropTypes.func,
 }
 
 export default Menu

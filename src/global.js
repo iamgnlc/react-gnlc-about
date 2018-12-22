@@ -1,5 +1,3 @@
-global.topOffset = 60
-
 global.title = "Curriculum Vitae of Gianluca Agnocchetti"
 
 global.meta = {

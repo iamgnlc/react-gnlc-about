@@ -21,10 +21,14 @@ class Header extends Component {
     }
   }
 
+  closeNav = () => {
+    if (this.state.isOpen) this.toggleNav()
+  }
+
   toggleNav = () => {
     this.setState({
       isOpen: !this.state.isOpen
-    });
+    })
   }
   
   render() {
@@ -34,11 +38,13 @@ class Header extends Component {
           { global.brand }
         </NavbarBrand>
         <NavbarToggler onClick={this.toggleNav}>
-        <FaBars />
+          <FaBars />
         </NavbarToggler>
 
         <Collapse isOpen={this.state.isOpen} navbar>
-          <Menu menu={this.props.menu} />
+          <Menu
+            menu={this.props.menu}
+            callback={this.closeNav} />
         </Collapse>
 
       </Navbar>

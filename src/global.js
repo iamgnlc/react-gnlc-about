@@ -8,3 +8,5 @@ global.meta = {
 }
 
 global.brand = "gnlc@localhost ~ $"
+
+global.githubRepo = "https://github.com/iamgnlc/cv"

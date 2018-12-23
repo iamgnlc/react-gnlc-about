@@ -88,7 +88,7 @@ hr {
     font-size: 1rem;
   }
   .title-wrapper {
-    top: calc(var(--top-offset) + 32px);
+    top: calc(var(--top-offset) + 40px);
   }
   .list {
     list-style: none;

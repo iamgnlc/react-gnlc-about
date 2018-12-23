@@ -48,7 +48,7 @@ a:hover {
 .title-wrapper {
   background-color: var(--terminal-background);
   position: sticky;
-  top: calc(var(--top-offset) * 1.75);
+  top: calc(var(--top-offset) + 46px);
   z-index: 2;
 }
 .heading {
@@ -81,6 +81,15 @@ hr {
   border-color: var(--terminal-border-color);
 }
 @media (max-width: 575.98px) {
+  .heading {
+    font-size: 1.25rem;
+  }
+  .title {
+    font-size: 1rem;
+  }
+  .title-wrapper {
+    top: calc(var(--top-offset) + 32px);
+  }
   .list {
     list-style: none;
   }

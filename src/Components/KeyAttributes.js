@@ -23,16 +23,18 @@ class KeyAttributes extends Component {
         <Col xs={12} className="text-center heading-wrapper mb-3 py-1">
           <h2 className="heading m-0" dangerouslySetInnerHTML={{ __html: this.props.data.title }}></h2>
         </Col>
+        <Col xs={12}>
         {this.props.data.paragraphs.map((section, key) => {
           return(
-            <React.Fragment key={key}>
+            <Row key={key}>
               <Col xs={12} sm={3} className="title-wrapper"><h5 className="title text-center text-sm-right" dangerouslySetInnerHTML={{ __html: section.title }}></h5></Col>
               <Col xs={12} sm={9}>
                 <List data={section.list} />
               </Col>
-            </React.Fragment>
+            </Row>
           )
         })}
+        </Col>
       </Row>
     )
   }

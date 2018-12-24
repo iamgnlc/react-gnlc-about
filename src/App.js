@@ -14,9 +14,9 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'animate.css/animate.min.css'
 import './App.css'
 
-import ScrollableAnchor from 'react-scrollable-anchor'
+import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor'
 
-// import Hero from './Components/Hero.js'
+ // import Hero from './Components/Hero.js'
 import Header from './Components/Header.js'
 import Footer from './Components/Footer.js'
 import ContactDetails from './Components/ContactDetails.js'
@@ -28,6 +28,8 @@ import SpokenLanguages from './Components/SpokenLanguages.js'
 class App extends Component {
   constructor(props) {
     super(props)
+
+    configureAnchors({offset: -56, scrollDuration: 750})
 
     this.state = {
       data: jsonData,

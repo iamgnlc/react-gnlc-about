@@ -21,6 +21,10 @@ class Header extends Component {
     }
   }
 
+  callback = (params) => {
+    this.closeNav()
+  }
+
   closeNav = () => {
     if (this.state.isOpen) this.toggleNav()
   }
@@ -44,7 +48,7 @@ class Header extends Component {
         <Collapse isOpen={this.state.isOpen} navbar>
           <Menu
             menu={this.props.menu}
-            callback={this.closeNav} />
+            callback={this.callback} />
         </Collapse>
 
       </Navbar>

@@ -3,7 +3,7 @@
 :root {
   --top-offset: 56px;
   --terminal-background: #222;
-  --terminal-header: #2a2a2a;
+  --terminal-navbar: #2a2a2a;
   --terminal-brand-color: #91FF00;
   --terminal-heading-color: #999;
   --terminal-title-color: #666;
@@ -29,10 +29,12 @@ a:hover {
 }
 .navbar-terminal,
 .footer {
-  background-color: var(--terminal-header);
+  background-color: var(--terminal-navbar);
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,.35);
 }
 .navbar-terminal .navbar-brand,
+.navbar-terminal .navbar-brand:active,
+.navbar-terminal .navbar-brand:focus,
 .navbar-terminal .navbar-brand:hover {
   color: var(--terminal-brand-color);
 }

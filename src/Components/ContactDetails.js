@@ -6,6 +6,8 @@ import {
   Col
 } from 'reactstrap'
 
+import Mailto from 'react-protected-mailto'
+
 class ContactDetails extends Component {
   render() {
     return(
@@ -23,7 +25,7 @@ class ContactDetails extends Component {
             </Col>
             <Col xs={12} sm={4} className="text-md-right"><h5 className="title">Telephone</h5></Col>
             <Col xs={12} sm={8}><p>{this.props.data.phoneNumber.map((phoneNumber, key) => {
-              return <a key={key} href={"tel:" + phoneNumber} className="d-block">{phoneNumber}</a>
+              return <Mailto key={key} tel={phoneNumber} />
             })}</p></Col>
           </Row>
         </Col>
@@ -31,7 +33,7 @@ class ContactDetails extends Component {
           <Row>
             <Col xs={12} sm={4} className="text-md-right"><h5 className="title">Email</h5></Col>
             <Col xs={12} sm={8}><p>{this.props.data.email.map((email, key) => {
-              return <a key={key} href={"mailto:" + email} className="d-block">{email}</a>
+              return <Mailto key={key} email={email} />
             })}</p></Col>
             <Col xs={12} sm={4} className="text-md-right"><h5 className="title">Web</h5></Col>
             <Col xs={12} sm={8}><p>{this.props.data.web.map((url, key) => {

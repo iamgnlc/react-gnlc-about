@@ -38,13 +38,14 @@ class Menu extends Component {
     return(
       <Nav className="ml-auto animated fadeInRight" navbar>
         {this.props.menu.map((entry, key) => {
+          let anchor = "#" + entry.ref
           return(
             <NavItem key={key}>
               <NavLink
-                className={classNames({"active": "#" + entry.ref === this.state.anchor})}
+                className={classNames({"active": anchor === this.state.anchor})}
                 onClick={() => {
-                  goToAnchor("#" + entry.ref, true)
-                  this.setAnchor("#" + entry.ref)
+                  goToAnchor(anchor, true)
+                  this.setAnchor(anchor)
                   this.props.callback()
                 }}
               >~/{entry.name}</NavLink>

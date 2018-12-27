@@ -39,18 +39,16 @@ class Header extends Component {
     return (
       <Navbar className="header navbar-terminal" fixed="top" dark expand="lg">
         <NavbarBrand href="/" className="mr-4 animated fadeInLeft">
-          { global.brand }
+          {global.brand}
         </NavbarBrand>
         <NavbarToggler onClick={this.toggleNav}>
           <FaBars />
         </NavbarToggler>
-
         <Collapse isOpen={this.state.isOpen} navbar>
           <Menu
             menu={this.props.menu}
             callback={this.callback} />
         </Collapse>
-
       </Navbar>
     )
   }

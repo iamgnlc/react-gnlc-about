@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
 import jsonData from './data.json'
-import './global.js'
-
-import { Helmet } from 'react-helmet'
 
 import "./global.js"
 
@@ -14,9 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'animate.css/animate.min.css'
 import './App.css'
 
-import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor'
-
- // import Hero from './Components/Hero.js'
+// import Hero from './Components/Hero.js'
 import Header from './Components/Header.js'
 import Footer from './Components/Footer.js'
 import ContactDetails from './Components/ContactDetails.js'
@@ -24,6 +19,9 @@ import Description from './Components/Description.js'
 import PersonalInfo from './Components/PersonalInfo.js'
 import KeyAttributes from './Components/KeyAttributes.js'
 import SpokenLanguages from './Components/SpokenLanguages.js'
+
+import { Helmet } from 'react-helmet'
+import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor'
 
 class App extends Component {
   constructor(props) {

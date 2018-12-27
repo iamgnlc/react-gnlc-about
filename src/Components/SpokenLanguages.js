@@ -16,7 +16,7 @@ class SpokenLanguages extends Component {
         </Col>
         <Col xs={12}>
 
-          <Table responsive={true}>
+          <Table responsive>
             <thead>
               <tr>
                 <th></th>
@@ -27,19 +27,19 @@ class SpokenLanguages extends Component {
             </thead>
             <tbody>
               <tr>
-                <th dangerouslySetInnerHTML={{ __html: this.props.data.headCol[0] }}></th>
+                <th scope="row" dangerouslySetInnerHTML={{ __html: this.props.data.headCol[0] }}></th>
                 <td className="text-center" dangerouslySetInnerHTML={{ __html: this.props.data.table.itRead }}></td>
                 <td className="text-center" dangerouslySetInnerHTML={{ __html: this.props.data.table.enRead }}></td>
                 <td className="text-center" dangerouslySetInnerHTML={{ __html: this.props.data.table.tenRead }}></td>
               </tr>
               <tr>
-                <th dangerouslySetInnerHTML={{ __html: this.props.data.headCol[1] }}></th>
+                <th scope="row" dangerouslySetInnerHTML={{ __html: this.props.data.headCol[1] }}></th>
                 <td className="text-center" dangerouslySetInnerHTML={{ __html: this.props.data.table.itWrite }}></td>
                 <td className="text-center" dangerouslySetInnerHTML={{ __html: this.props.data.table.enWrite }}></td>
                 <td className="text-center" dangerouslySetInnerHTML={{ __html: this.props.data.table.tenWrite }}></td>
               </tr>
               <tr>
-                <th dangerouslySetInnerHTML={{ __html: this.props.data.headCol[2] }}></th>
+                <th scope="row" dangerouslySetInnerHTML={{ __html: this.props.data.headCol[2] }}></th>
                 <td className="text-center" dangerouslySetInnerHTML={{ __html: this.props.data.table.itVerb }}></td>
                 <td className="text-center" dangerouslySetInnerHTML={{ __html: this.props.data.table.enVerb }}></td>
                 <td className="text-center" dangerouslySetInnerHTML={{ __html: this.props.data.table.tenVerb }}></td>

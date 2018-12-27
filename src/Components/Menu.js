@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from "prop-types"
 
-import { goToAnchor } from 'react-scrollable-anchor'
+import "../global.js"
 
 import {
   Nav,
@@ -10,8 +10,7 @@ import {
 } from 'reactstrap'
 
 import classNames from 'classnames'
-
-import "../global.js"
+import { goToAnchor } from 'react-scrollable-anchor'
 
 class Menu extends Component {
   constructor(props) {

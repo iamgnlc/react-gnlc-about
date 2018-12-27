@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import "../global.js"
+
 import {
   Navbar,
 } from 'reactstrap'
-
-import "../global.js"
 
 import { IconContext } from 'react-icons'
 import { FaHeart } from 'react-icons/fa'

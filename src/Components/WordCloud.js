@@ -2,23 +2,33 @@ import React, { Component } from 'react'
  
 import TagCloud from 'react-tag-cloud'
 
-import "./cloud.js"
-import cloud from './cloud.js'
+import cloud from '../config/cloud.js'
  
-const WordCloud = React.memo(function WordCloud(props) {
-  let cloudStyle = {
-    fontFamily: 'Inconsolata',
-    width: '100%',
-    height: 'calc(100vh - 100px)',
-  }
-  return (
-    <React.Fragment>
+const cloudStyle = {
+  fontFamily: 'Inconsolata',
+  width: '100%',
+  height: 'calc(100vh - 100px)',
+}
 
-      {/* Desktop */}
-      <TagCloud 
+class WordCloud extends Component {
+
+  shuffle = () => {
+    this.forceUpdate();
+  }
+
+  componentDidMount() {
+    // setInterval(() => {
+    //   this.shuffle();
+    // }, 2500);
+  }
+
+  renderDesktop = () => {
+    return (
+      <TagCloud
+        onClick={this.shuffle}
         className="d-none d-sm-block"
         style={cloudStyle}>
-        { cloud.map((word) => {
+        {cloud.map((word) => {
           let tagStyle = {
             fontSize: word.value * 6,
             opacity: word.value / 10,
@@ -31,12 +41,16 @@ const WordCloud = React.memo(function WordCloud(props) {
           >{word.text}</span>)
         })}
       </TagCloud>
-
-      {/* Mobile */}
+    )
+  }
+  
+  renderMobile = () => {
+    return(
       <TagCloud 
+        onClick={this.shuffle}
         className="d-block d-sm-none"
         style={cloudStyle}>
-        { cloud.map((word) => {
+        {cloud.map((word) => {
           let tagStyle = {
             fontSize: word.value * 3,
             opacity: word.value / 10,
@@ -49,9 +63,22 @@ const WordCloud = React.memo(function WordCloud(props) {
           >{word.text}</span>)
         })}
       </TagCloud>
+    )
+  }
 
-    </React.Fragment>
-  )
-})
+  render() {
+    return (
+      <React.Fragment>
+
+        {/* Desktop */}
+        { this.renderDesktop() }
+
+        {/* Mobile */}
+        { this.renderMobile() }
+
+      </React.Fragment>
+    )
+  }
+}
 
 export default WordCloud

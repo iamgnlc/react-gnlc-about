@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import jsonData from './data.json'
 
-import "./global.js"
+import jsonData from './config/data.json'
+import "./config/global.js"
 
 import {
   Container,
@@ -62,15 +62,15 @@ class App extends Component {
 
           <Container fluid className="mt-5 mb-4 pt-3 hero">
             <Parallax
-              offsetYMax={75}
-              offsetYMin={-75}
+              offsetYMax={150}
+              offsetYMin={-150}
               slowerScrollRate
             >
               <Hero />
             </Parallax>
           </Container>
 
-          <Container className="mt-4 mb-5  animated fadeIn">
+          <Container className="mt-4 mb-5 main animated fadeIn">
 
             <ScrollableAnchor id={this.state.data.contactDetails.id}>
               <ContactDetails

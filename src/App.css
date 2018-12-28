@@ -13,6 +13,14 @@
   --terminal-link-color: #645AF1;
   --terminal-link-color-hover: #aea8f8;
 }
+::selection {
+  background:  var(--terminal-brand-color);
+  color: var(--terminal-link-color);
+}
+::-moz-selection {
+  background: var(--terminal-brand-color);
+  color: var(--terminal-link-color);
+}
 body {
   font-family: 'Inconsolata', monospace, Arial, Helvetica, sans-serif;
   background-color: var(--terminal-background);
@@ -30,10 +38,22 @@ a:hover {
 }
 .tag {
   text-shadow: 1px 2px 0px #000;
+  transition: 1.5s;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+      -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 .hero {
   background-color: var(--terminal-hero);
   overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+}
+.main {
+  z-index: 5;
 }
 .navbar-terminal,
 .footer {

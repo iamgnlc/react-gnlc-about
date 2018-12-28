@@ -3,6 +3,7 @@
 :root {
   --top-offset: 56px;
   --terminal-background: #222;
+  --terminal-hero: #1e1e1e;
   --terminal-navbar: #2a2a2a;
   --terminal-brand-color: #91FF00;
   --terminal-heading-color: #999;
@@ -26,6 +27,13 @@ a {
 a:hover {
   color: var(--terminal-link-color-hover);
   cursor: pointer;
+}
+.tag {
+  text-shadow: 1px 2px 0px #000;
+}
+.hero {
+  background-color: var(--terminal-hero);
+  overflow: hidden;
 }
 .navbar-terminal,
 .footer {
@@ -69,6 +77,10 @@ strong,
 }
 hr {
   border-top: 1px solid var(--terminal-border-color);
+  width: 100vw;
+  position: relative;
+  margin-left: -50vw;
+  left: 50%;
 }
 .table {
   table-layout: fixed;

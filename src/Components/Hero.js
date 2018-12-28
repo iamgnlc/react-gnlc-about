@@ -1,29 +1,22 @@
-import React, { Component } from 'react'
+import React from 'react'
 import {
   Row,
   Col
 } from 'reactstrap'
 
-class Hero extends Component {
-  constructor(props) {
-    super(props)
+import WordCloud from './WordCloud.js'
 
-    this.state = {
-      data: this.props.data
-    }
-  }
+const Hero = React.memo(function Hero(props) {
+  return(
 
-  render() {
-    return(
+    <Row>
+      <Col xs={12} className="d-flex align-items-center justify-content-center">
+        <WordCloud />
+      </Col>
+    </Row>
 
-      <Row className="hero">
-        <Col xs={12} className="d-flex align-items-center justify-content-center animated zoomIn">
-          <h1>{global.headLine}</h1>
-        </Col>
-      </Row>
+  )
+})
 
-    )
-  }
-}
 
 export default Hero

@@ -11,7 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'animate.css/animate.min.css'
 import './App.css'
 
-// import Hero from './Components/Hero.js'
+import Hero from './Components/Hero.js'
 import Header from './Components/Header.js'
 import Footer from './Components/Footer.js'
 import ContactDetails from './Components/ContactDetails.js'
@@ -21,6 +21,7 @@ import KeyAttributes from './Components/KeyAttributes.js'
 import SpokenLanguages from './Components/SpokenLanguages.js'
 
 import { Helmet } from 'react-helmet'
+import { ParallaxProvider, Parallax } from 'react-scroll-parallax'
 import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor'
 
 class App extends Component {
@@ -47,64 +48,76 @@ class App extends Component {
   render() {
     return (
     
+      <ParallaxProvider>
       <div id="App">
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>{global.title}</title>
-          <meta name="author" content={global.meta.author} />
-          <meta name="description" content={global.meta.description} />
-          <meta name="robots" content="noindex" />
-        </Helmet>
+          <Helmet>
+            <meta charSet="utf-8" />
+            <title>{global.title}</title>
+            <meta name="author" content={global.meta.author} />
+            <meta name="description" content={global.meta.description} />
+            <meta name="robots" content="noindex" />
+          </Helmet>
 
-        <Header menu={this.state.menu} />
+          <Header menu={this.state.menu} />
 
-        <Container className="my-5 pt-3 animated fadeIn">
+          <Container fluid className="mt-5 mb-4 pt-3 hero">
+            <Parallax
+              offsetYMax={75}
+              offsetYMin={-75}
+              slowerScrollRate
+            >
+              <Hero />
+            </Parallax>
+          </Container>
 
-          <ScrollableAnchor id={this.state.data.contactDetails.id}>
-            <ContactDetails
-              data={this.state.data.contactDetails} />
-          </ScrollableAnchor>
+          <Container className="mt-4 mb-5  animated fadeIn">
 
-          <hr/>
+            <ScrollableAnchor id={this.state.data.contactDetails.id}>
+              <ContactDetails
+                data={this.state.data.contactDetails} />
+            </ScrollableAnchor>
 
-          <ScrollableAnchor id={this.state.data.profile.id}>
-            <Description
-              data={this.state.data.profile} />
-          </ScrollableAnchor>
+            <hr/>
 
-          <hr/>
+            <ScrollableAnchor id={this.state.data.profile.id}>
+              <Description
+                data={this.state.data.profile} />
+            </ScrollableAnchor>
 
-          <ScrollableAnchor id={this.state.data.keyAttributes.id}>
-            <KeyAttributes
-              data={this.state.data.keyAttributes} />
-          </ScrollableAnchor>
+            <hr/>
 
-          <hr/>
+            <ScrollableAnchor id={this.state.data.keyAttributes.id}>
+              <KeyAttributes
+                data={this.state.data.keyAttributes} />
+            </ScrollableAnchor>
 
-          <ScrollableAnchor id={this.state.data.spokenLanguages.id}>
-            <SpokenLanguages
-              data={this.state.data.spokenLanguages} />
-          </ScrollableAnchor>
+            <hr/>
 
-          <hr/>
+            <ScrollableAnchor id={this.state.data.spokenLanguages.id}>
+              <SpokenLanguages
+                data={this.state.data.spokenLanguages} />
+            </ScrollableAnchor>
 
-          <ScrollableAnchor id={this.state.data.personalInfo.id}>
-            <PersonalInfo
-              data={this.state.data.personalInfo} />
-          </ScrollableAnchor>
+            <hr/>
 
-          <hr/>
+            <ScrollableAnchor id={this.state.data.personalInfo.id}>
+              <PersonalInfo
+                data={this.state.data.personalInfo} />
+            </ScrollableAnchor>
 
-          <ScrollableAnchor id={this.state.data.activities.id}>
-            <Description
-              data={this.state.data.activities} />
-          </ScrollableAnchor>
+            <hr/>
 
-        </Container>
+            <ScrollableAnchor id={this.state.data.activities.id}>
+              <Description
+                data={this.state.data.activities} />
+            </ScrollableAnchor>
 
-        <Footer />
+          </Container>
 
-      </div>
+          <Footer />
+
+        </div>
+      </ParallaxProvider> 
 
     )
   }

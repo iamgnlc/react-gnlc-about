@@ -103,6 +103,7 @@ hr {
   left: 50%;
 }
 .table {
+  width: 100%;
   table-layout: fixed;
 }
 .table thead td,
@@ -110,14 +111,16 @@ hr {
 .table thead th,
 .table tbody th {
   border-width: 1px;
-  border-style: dashed;
   border-color: var(--terminal-border-color);
 }
 @media (max-width: 575.98px) {
   .heading {
     font-size: 1.25rem;
   }
-  .title {
+  .table {
+    width: auto;
+  }
+   .title {
     font-size: 1rem;
   }
   .title-wrapper {

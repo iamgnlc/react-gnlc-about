@@ -39,7 +39,7 @@ class App extends Component {
   buildMenu = (jsondata) => {
     let menu = []
     Object.keys(jsondata).map(section => {
-      menu.push({ ref: jsondata[section].id, name: jsondata[section].id})
+      menu.push({ ref: jsondata[section].id, name: jsondata[section].id })
       return true
     })
     return menu
@@ -49,7 +49,7 @@ class App extends Component {
     return (
     
       <ParallaxProvider>
-      <div id="App">
+        <div id="App">
           <Helmet>
             <meta charSet="utf-8" />
             <title>{global.title}</title>
@@ -60,7 +60,7 @@ class App extends Component {
 
           <Header menu={this.state.menu} />
 
-          <Container fluid className="mt-5 mb-4 pt-3 hero">
+          <Container fluid className="mt-5 mb-4 p-0 pt-3 hero">
             <Parallax
               offsetYMax={150}
               offsetYMin={-150}
@@ -68,6 +68,7 @@ class App extends Component {
             >
               <Hero />
             </Parallax>
+
           </Container>
 
           <Container className="mt-4 mb-5 main animated fadeIn">

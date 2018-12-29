@@ -88,7 +88,7 @@ strong,
 .title-wrapper {
   background-color: $terminal-background;
   position: sticky;
-  top: calc($top-offset + 46px);
+  top: $top-offset + 46px;
   z-index: 2;
 }
 .heading {
@@ -127,7 +127,7 @@ hr {
     width: auto;
   }
   .title-wrapper {
-    top: calc($top-offset) + 40px;
+    top: $top-offset + 40px;
     .title {
      font-size: 1rem;
     }

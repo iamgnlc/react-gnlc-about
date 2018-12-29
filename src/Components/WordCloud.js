@@ -16,10 +16,20 @@ class WordCloud extends Component {
     this.forceUpdate();
   }
 
-  componentDidMount() {
-    // setInterval(() => {
-    //   this.shuffle();
-    // }, 2500);
+  // componentDidMount() {
+  //   setInterval(() => {
+  //     this.shuffle();
+  //   }, process.env.REACT_APP_AUTO_SHUFFLE_TIMEOUT);
+  // }
+
+  renderWord = (text, style) => {
+    return (
+      <span
+        key={text}
+        className="tag"
+        style={style}
+      >{text}</span> 
+    )
   }
 
   renderDesktop = () => {
@@ -34,11 +44,7 @@ class WordCloud extends Component {
             opacity: word.value / 10,
             padding: word.value * 1.5,
           }
-          return (<span
-            key={word}
-            className="tag"
-            style={tagStyle}
-          >{word.text}</span>)
+          return this.renderWord(word.text, tagStyle)
         })}
       </TagCloud>
     )
@@ -56,11 +62,7 @@ class WordCloud extends Component {
             opacity: word.value / 10,
             padding: word.value * .75,
           }
-          return (<span
-            key={word}
-            className="tag"
-            style={tagStyle}
-          >{word.text}</span>)
+          return this.renderWord(word.text, tagStyle)
         })}
       </TagCloud>
     )
@@ -69,13 +71,8 @@ class WordCloud extends Component {
   render() {
     return (
       <React.Fragment>
-
-        {/* Desktop */}
         { this.renderDesktop() }
-
-        {/* Mobile */}
         { this.renderMobile() }
-
       </React.Fragment>
     )
   }

@@ -28,7 +28,7 @@ class App extends Component {
   constructor(props) {
     super(props)
 
-    configureAnchors({offset: -56, scrollDuration: 750})
+    configureAnchors({offset: process.env.REACT_APP_ANCHOR_OFFSET, scrollDuration: process.env.REACT_APP_ANCHOR_SCROLL_DURATION})
 
     this.state = {
       data: jsonData,
@@ -43,6 +43,13 @@ class App extends Component {
       return true
     })
     return menu
+  }
+
+  componentDidMount() {
+    // Disable console.log in production.
+    if (process.env.NODE_ENV === "production") console.log = function() {}
+    // Show environment.
+    console.log(process.env.NODE_ENV)
   }
 
   render() {
@@ -62,8 +69,8 @@ class App extends Component {
 
           <Container fluid className="mt-5 p-0 pb-4 pt-3 hero">
             <Parallax
-              offsetYMax={150}
-              offsetYMin={-150}
+              offsetYMax={process.env.REACT_APP_PARALLAX_OFFSET}
+              offsetYMin={-process.env.REACT_APP_PARALLAX_OFFSET}
               slowerScrollRate
             >
               <Hero />
@@ -72,49 +79,49 @@ class App extends Component {
           </Container>
 
           <main className="main">
-            <Container className="mb-5 pt-4 animated fadeIn">
+            <Container className="pb-5 pt-4 animated fadeIn">
 
-            <ScrollableAnchor id={this.state.data.contactDetails.id}>
-              <ContactDetails
-                data={this.state.data.contactDetails} />
-            </ScrollableAnchor>
+              <ScrollableAnchor id={this.state.data.contactDetails.id}>
+                <ContactDetails
+                  data={this.state.data.contactDetails} />
+              </ScrollableAnchor>
 
-            <hr/>
+              <hr/>
 
-            <ScrollableAnchor id={this.state.data.profile.id}>
-              <Description
-                data={this.state.data.profile} />
-            </ScrollableAnchor>
+              <ScrollableAnchor id={this.state.data.profile.id}>
+                <Description
+                  data={this.state.data.profile} />
+              </ScrollableAnchor>
 
-            <hr/>
+              <hr/>
 
-            <ScrollableAnchor id={this.state.data.keyAttributes.id}>
-              <KeyAttributes
-                data={this.state.data.keyAttributes} />
-            </ScrollableAnchor>
+              <ScrollableAnchor id={this.state.data.keyAttributes.id}>
+                <KeyAttributes
+                  data={this.state.data.keyAttributes} />
+              </ScrollableAnchor>
 
-            <hr/>
+              <hr/>
 
-            <ScrollableAnchor id={this.state.data.spokenLanguages.id}>
-              <SpokenLanguages
-                data={this.state.data.spokenLanguages} />
-            </ScrollableAnchor>
+              <ScrollableAnchor id={this.state.data.spokenLanguages.id}>
+                <SpokenLanguages
+                  data={this.state.data.spokenLanguages} />
+              </ScrollableAnchor>
 
-            <hr/>
+              <hr/>
 
-            <ScrollableAnchor id={this.state.data.personalInfo.id}>
-              <PersonalInfo
-                data={this.state.data.personalInfo} />
-            </ScrollableAnchor>
+              <ScrollableAnchor id={this.state.data.personalInfo.id}>
+                <PersonalInfo
+                  data={this.state.data.personalInfo} />
+              </ScrollableAnchor>
 
-            <hr/>
+              <hr/>
 
-            <ScrollableAnchor id={this.state.data.activities.id}>
-              <Description
-                data={this.state.data.activities} />
-            </ScrollableAnchor>
+              <ScrollableAnchor id={this.state.data.activities.id}>
+                <Description
+                  data={this.state.data.activities} />
+              </ScrollableAnchor>
 
-          </Container>
+            </Container>
           </main>
 
           <Footer />

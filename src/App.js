@@ -9,7 +9,7 @@ import {
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'animate.css/animate.min.css'
-import './App.css'
+import './App.scss'
 
 import Hero from './Components/Hero.js'
 import Header from './Components/Header.js'
@@ -60,7 +60,7 @@ class App extends Component {
 
           <Header menu={this.state.menu} />
 
-          <Container fluid className="mt-5 mb-4 p-0 pt-3 hero">
+          <Container fluid className="mt-5 p-0 pb-4 pt-3 hero">
             <Parallax
               offsetYMax={150}
               offsetYMin={-150}
@@ -71,7 +71,8 @@ class App extends Component {
 
           </Container>
 
-          <Container className="mt-4 mb-5 main animated fadeIn">
+          <main className="main">
+            <Container className="mb-5 pt-4 animated fadeIn">
 
             <ScrollableAnchor id={this.state.data.contactDetails.id}>
               <ContactDetails
@@ -114,6 +115,7 @@ class App extends Component {
             </ScrollableAnchor>
 
           </Container>
+          </main>
 
           <Footer />
 

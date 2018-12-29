@@ -77,11 +77,14 @@ strong,
     color: $terminal-brand-color;
   }
 }
-.navbar-toggler {
-  padding: 0;
-  border: none;
+.navbar-dark {
+  .navbar-toggler {
+    padding: 0;
+    border: none;
+    color: #fff
+  }
 }
-.title {
+  .title {
   color: $terminal-title-color;
   text-shadow: 1px 1px 0px #000;
 }

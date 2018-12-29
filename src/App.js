@@ -28,8 +28,6 @@ class App extends Component {
   constructor(props) {
     super(props)
 
-    configureAnchors({offset: process.env.REACT_APP_ANCHOR_OFFSET, scrollDuration: process.env.REACT_APP_ANCHOR_SCROLL_DURATION})
-
     this.state = {
       data: jsonData,
       menu: this.buildMenu(jsonData),
@@ -46,6 +44,11 @@ class App extends Component {
   }
 
   componentDidMount() {
+    // Configure scroll to anchor.
+    configureAnchors({
+      offset: -process.env.REACT_APP_ANCHOR_OFFSET,
+      scrollDuration: process.env.REACT_APP_ANCHOR_SCROLL_DURATION
+    })
     // Disable console.log in production.
     if (process.env.NODE_ENV === "production") console.log = function() {}
     // Show environment.
@@ -55,18 +58,18 @@ class App extends Component {
   render() {
     return (
     
-      <ParallaxProvider>
-        <div id="App">
-          <Helmet>
-            <meta charSet="utf-8" />
-            <title>{global.title}</title>
-            <meta name="author" content={global.meta.author} />
-            <meta name="description" content={global.meta.description} />
-            <meta name="robots" content="noindex" />
-          </Helmet>
+      <div id="App">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>{global.title}</title>
+          <meta name="author" content={global.meta.author} />
+          <meta name="description" content={global.meta.description} />
+          <meta name="robots" content="noindex" />
+        </Helmet>
 
-          <Header menu={this.state.menu} />
+        <Header menu={this.state.menu} />
 
+        <ParallaxProvider>
           <Container fluid className="mt-5 p-0 pb-4 pt-3 hero">
             <Parallax
               offsetYMax={process.env.REACT_APP_PARALLAX_OFFSET}
@@ -75,59 +78,58 @@ class App extends Component {
             >
               <Hero />
             </Parallax>
+          </Container>
+        </ParallaxProvider> 
+
+        <main className="main">
+          <Container className="pb-5 pt-4 animated fadeIn">
+
+            <ScrollableAnchor id={this.state.data.contactDetails.id}>
+              <ContactDetails
+                data={this.state.data.contactDetails} />
+            </ScrollableAnchor>
+
+            <hr/>
+
+            <ScrollableAnchor id={this.state.data.profile.id}>
+              <Description
+                data={this.state.data.profile} />
+            </ScrollableAnchor>
+
+            <hr/>
+
+            <ScrollableAnchor id={this.state.data.keyAttributes.id}>
+              <KeyAttributes
+                data={this.state.data.keyAttributes} />
+            </ScrollableAnchor>
+
+            <hr/>
+
+            <ScrollableAnchor id={this.state.data.spokenLanguages.id}>
+              <SpokenLanguages
+                data={this.state.data.spokenLanguages} />
+            </ScrollableAnchor>
+
+            <hr/>
+
+            <ScrollableAnchor id={this.state.data.personalInfo.id}>
+              <PersonalInfo
+                data={this.state.data.personalInfo} />
+            </ScrollableAnchor>
+
+            <hr/>
+
+            <ScrollableAnchor id={this.state.data.activities.id}>
+              <Description
+                data={this.state.data.activities} />
+            </ScrollableAnchor>
 
           </Container>
+        </main>
 
-          <main className="main">
-            <Container className="pb-5 pt-4 animated fadeIn">
+        <Footer />
 
-              <ScrollableAnchor id={this.state.data.contactDetails.id}>
-                <ContactDetails
-                  data={this.state.data.contactDetails} />
-              </ScrollableAnchor>
-
-              <hr/>
-
-              <ScrollableAnchor id={this.state.data.profile.id}>
-                <Description
-                  data={this.state.data.profile} />
-              </ScrollableAnchor>
-
-              <hr/>
-
-              <ScrollableAnchor id={this.state.data.keyAttributes.id}>
-                <KeyAttributes
-                  data={this.state.data.keyAttributes} />
-              </ScrollableAnchor>
-
-              <hr/>
-
-              <ScrollableAnchor id={this.state.data.spokenLanguages.id}>
-                <SpokenLanguages
-                  data={this.state.data.spokenLanguages} />
-              </ScrollableAnchor>
-
-              <hr/>
-
-              <ScrollableAnchor id={this.state.data.personalInfo.id}>
-                <PersonalInfo
-                  data={this.state.data.personalInfo} />
-              </ScrollableAnchor>
-
-              <hr/>
-
-              <ScrollableAnchor id={this.state.data.activities.id}>
-                <Description
-                  data={this.state.data.activities} />
-              </ScrollableAnchor>
-
-            </Container>
-          </main>
-
-          <Footer />
-
-        </div>
-      </ParallaxProvider> 
+      </div>
 
     )
   }

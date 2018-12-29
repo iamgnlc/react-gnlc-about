@@ -11,6 +11,8 @@ import {
 import Menu from './Menu.js'
 
 import { FaBars } from 'react-icons/fa'
+import { FaEllipsisV } from 'react-icons/fa'
+import { FaTimes } from 'react-icons/fa'
 
 class Header extends Component {
   constructor(props) {
@@ -42,7 +44,7 @@ class Header extends Component {
           {global.brand}
         </NavbarBrand>
         <NavbarToggler onClick={this.toggleNav}>
-          <FaBars />
+          {this.state.isOpen ? <FaTimes /> : <FaEllipsisV /> }
         </NavbarToggler>
         <Collapse isOpen={this.state.isOpen} navbar>
           <Menu

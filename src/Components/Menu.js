@@ -43,8 +43,11 @@ class Menu extends Component {
               <NavLink
                 className={classNames({"active": anchor === this.state.anchor})}
                 onClick={() => {
+                  // Go to element.
                   goToAnchor(anchor, true)
+                  // Set active anchor.
                   this.setAnchor(anchor)
+                  // Execute callback.
                   this.props.callback()
                 }}
               >~/{entry.name}</NavLink>

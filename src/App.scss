@@ -65,6 +65,7 @@ strong,
 }
 .navbar-terminal,
 .footer {
+  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   background-color: rgba($terminal-navbar, .95);
   box-shadow: 0px 0px 5px 0px rgba(#000, .35);
@@ -81,7 +82,11 @@ strong,
   .navbar-toggler {
     padding: 0;
     border: none;
-    color: #fff
+    color: #fff;
+    &:active,
+    &:focus {
+      outline: none;
+    }
   }
 }
 .title {

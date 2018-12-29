@@ -10,7 +10,6 @@ import {
 
 import Menu from './Menu.js'
 
-import { FaBars } from 'react-icons/fa'
 import { FaEllipsisV } from 'react-icons/fa'
 import { FaTimes } from 'react-icons/fa'
 

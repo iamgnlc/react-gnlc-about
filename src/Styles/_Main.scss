@@ -1,0 +1,138 @@
+::selection {
+  background: rgba($terminal-brand-color, .75);
+  color: $terminal-background;
+  text-shadow: none;
+}
+::-moz-selection {
+  background: rgba($terminal-brand-color, .75);
+  color: $terminal-background;
+  text-shadow: none;
+}
+body {
+  font-family: 'Inconsolata', monospace, Arial, Helvetica, sans-serif;
+  background-color: $terminal-background;
+  margin: 0;
+  padding: 0;
+  color: $terminal-text-color;
+}
+a {
+  color: $terminal-link-color;
+  transition: all .125s ease-out;
+  &:hover {
+    color: $terminal-link-color-hover;
+    cursor: pointer;
+  }
+}
+b,
+strong,
+.text-bold {
+  color: $terminal-bold-color;
+  text-shadow: 1px 1px 0px #000;
+}
+.tag {
+  text-shadow: 1px 2px 0px #000;
+  transition: 1.5s;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.nav-menu {
+  .nav-item {
+    white-space: nowrap;    
+  }
+}
+.hero {
+  background-color: $terminal-hero;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+}
+.main {
+  z-index: 5;
+  box-shadow: 0px 0px 5px 0px rgba(#000, .35);
+}
+.navbar-terminal,
+.footer {
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  background-color: rgba($terminal-navbar, .95);
+  box-shadow: 0px 0px 5px 0px rgba(#000, .35);
+}
+.navbar-terminal {
+  .navbar-brand,
+  .navbar-brand:active,
+  .navbar-brand:focus,
+  .navbar-brand:hover {
+    color: $terminal-brand-color;
+    white-space: nowrap;
+  }
+}
+.navbar-dark {
+  .navbar-toggler {
+    padding: 0;
+    border: none;
+    color: #fff;
+    &:active,
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.title {
+  color: $terminal-title-color;
+  text-shadow: 1px 1px 0px #000;
+}
+.title-wrapper {
+  background-color: $terminal-background;
+  position: sticky;
+  top: $top-offset + 46px;
+  z-index: 2;
+}
+.heading {
+  color: $terminal-heading-color;
+  text-shadow: 1px 2px 0px #000;
+}
+.heading-wrapper {
+  background-color: $terminal-background;
+  position: sticky;
+  top: $top-offset;
+  z-index: 3;
+}
+hr {
+  border-top: 1px solid $terminal-border-color;
+  width: 100vw;
+  position: relative;
+  margin-left: -50vw;
+  left: 50%;
+}
+.table {
+  width: 100%;
+  table-layout: fixed;
+  thead td,
+  tbody td,
+  thead th,
+  tbody th {
+    border-width: 1px;
+    border-color: $terminal-border-color;
+  }
+}
+@media (max-width: 575.98px) {
+  .heading {
+    font-size: 1.25rem;
+  }
+  .table {
+    width: auto;
+  }
+  .title-wrapper {
+    top: $top-offset + 40px;
+    .title {
+     font-size: 1rem;
+    }
+  }
+  .list {
+    list-style: none;
+  }
+}

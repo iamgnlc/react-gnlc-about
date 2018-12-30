@@ -99,7 +99,7 @@ class App extends Component {
               {"showAll" in this.state.params ?
                 <ContactDetails data={this.state.data.contactDetails} />
               :
-                <HiddenContent label="Sorry... These info are hidden" />
+                <HiddenContent label={this.state.data.contactDetails.title} />
               }
             </ScrollableAnchor>
 

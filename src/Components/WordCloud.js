@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import TagCloud from 'react-tag-cloud'
 
 import cloud from '../config/cloud.js'
- 
+
 const cloudStyle = {
   fontFamily: 'Inconsolata',
   width: '100%',
@@ -11,16 +11,15 @@ const cloudStyle = {
 }
 
 class WordCloud extends Component {
-
   shuffle = () => {
     this.forceUpdate();
   }
 
-  // componentDidMount() {
-  //   setInterval(() => {
-  //     this.shuffle();
-  //   }, process.env.REACT_APP_AUTO_SHUFFLE_TIMEOUT);
-  // }
+  componentDidMount() {
+    // setInterval(() => {
+    //   this.shuffle()
+    // }, process.env.REACT_APP_AUTO_SHUFFLE_TIMEOUT);
+  }
 
   renderWord = (text, style) => {
     return (

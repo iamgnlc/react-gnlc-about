@@ -14,7 +14,7 @@ class HiddenContent extends Component {
       <Row className="hidden-content">
         {this.props.label ?
           <Col xs={12} className="text-center heading-wrapper m-0 py-2">
-            <h4 className="heading m-0">{this.props.label}</h4>
+            <h2 className="heading m-0">{this.props.label}</h2>
           </Col>
         : null}
         <Col xs={12}>
@@ -28,6 +28,7 @@ class HiddenContent extends Component {
               <div className="hidden-content-3"></div>
             </div>
           </div>
+          <p className="text-center text-muted">Sorry, these informations are hidden.</p>
         </Col>
       </Row>
     )

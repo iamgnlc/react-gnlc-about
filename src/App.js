@@ -37,9 +37,10 @@ class App extends Component {
     }
   }
 
-  setParams = () =>{
-    let values = new URLSearchParams(window.location.search)
+  setParams = () => {
     let params = {}
+    if (!window.location.search) return params
+    let values = new URLSearchParams(window.location.search)
     for(let param of values.entries()) { 
       params[param[0]] = param[1] 
     }

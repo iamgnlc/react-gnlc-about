@@ -20,6 +20,7 @@ import Description from './Components/Description.js'
 import PersonalInfo from './Components/PersonalInfo.js'
 import KeyAttributes from './Components/KeyAttributes.js'
 import SpokenLanguages from './Components/SpokenLanguages.js'
+import Education from './Components/Education.js'
 
 import { Helmet } from 'react-helmet'
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax'
@@ -113,6 +114,12 @@ class App extends Component {
 
             <ScrollableAnchor id={this.state.data.keyAttributes.id}>
               <KeyAttributes data={this.state.data.keyAttributes} />
+            </ScrollableAnchor>
+
+            <hr/>
+
+            <ScrollableAnchor id={this.state.data.education.id}>
+              <Education data={this.state.data.education} />
             </ScrollableAnchor>
 
             <hr/>

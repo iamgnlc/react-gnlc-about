@@ -35,7 +35,7 @@ class Menu extends Component {
 
   render() {
     return(
-      <Nav className="ml-auto animated fadeInRight" navbar>
+      <Nav className="ml-auto animated fadeInRight nav-menu" navbar>
         {this.props.menu.map((entry, key) => {
           let anchor = "#" + entry.ref
           return(

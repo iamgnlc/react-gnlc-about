@@ -154,6 +154,36 @@
       }
     ]
   },
+  "education": {
+    "id": "education",
+    "title": "Education",
+    "paragraphs": [
+      {
+        "date": "2011 - 2012",
+        "text": "English as a Foreign Language (ESOL) – University of Cambridge Certified – Level 1 / Level 2 @ Oaklands College, St. Albans, Hertfordshire – UK"
+      },
+      {
+        "date": "2002",
+        "text": "Web Marketing Specialist @ Madri Internet Marketing"
+      },
+      {
+        "date": "2001",
+        "text": "MS2151 - MS Windows 2000 Network and OS Essentials @ ELEA Spa - Napoli, Italy"
+      },
+      {
+        "date": "2001",
+        "text": "MS Office User Specialist in Microsoft Word 2000 @ ELEA Spa - Napoli, Italy"
+      },
+      {
+        "date": "1999",
+        "text": "MVS/ESO TSO mainframe Operator @ 3R Informatica e Telematica S.r.l."
+      },
+      {
+        "date": "1993 - 1998",
+        "text": "Degree in Electronic and Telecommunication with valuation of 43/60 @ I.T.I.S. \"Leonardo Da Vinci\" - Viterbo, Italy"
+      }
+    ]
+  },
   "spokenLanguages": {
     "id": "languages",
     "title": "Spoken languages",

@@ -56,6 +56,11 @@ strong,
   -ms-user-select: none;
   user-select: none;
 }
+.nav-menu {
+  .nav-item {
+    white-space: nowrap;    
+  }
+}
 .hero {
   background-color: $terminal-hero;
   overflow: hidden;

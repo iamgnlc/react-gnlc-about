@@ -1,0 +1,51 @@
+.hidden-wrapper {
+  height: 150px;
+  position: relative;
+}
+.hidden-wrapper-body div {
+  background: #333;
+  background-size: 800px 104px;
+  height: 104px;
+  position: relative;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 15px;
+}
+div.hidden-avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  right: auto;
+}
+div.hidden-author {
+  top: 20px;
+  height: 20px;
+  left: 65px;
+  width: 150px;
+  border-radius: 20px;
+}
+div.hidden-label {
+  left: 65px;
+  top: 50px;
+  height: 10px;
+  width: 100px;
+  border-radius: 10px;
+}
+div.hidden-content-1,
+div.hidden-content-2,
+div.hidden-content-3 {
+  left: 0;
+  right: 0;
+  height: 10px;
+  border-radius: 10px;
+}
+div.hidden-content-1 {
+  top: 80px;
+}
+div.hidden-content-2 {
+  top: 100px;
+}
+div.hidden-content-3 {
+  top: 120px;
+}

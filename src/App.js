@@ -12,6 +12,7 @@ import 'animate.css/animate.min.css'
 import './App.scss'
 
 import Hero from './Components/Hero.js'
+import HiddenContent from './Components/HiddenContent.js'
 import Header from './Components/Header.js'
 import Footer from './Components/Footer.js'
 import ContactDetails from './Components/ContactDetails.js'
@@ -31,7 +32,17 @@ class App extends Component {
     this.state = {
       data: jsonData,
       menu: this.buildMenu(jsonData),
+      params: this.setParams(),
     }
+  }
+
+  setParams = () =>{
+    let values = new URLSearchParams(window.location.search)
+    let params = {}
+    for(let param of values.entries()) { 
+      params[param[0]] = param[1] 
+    }
+    return params
   }
 
   buildMenu = (jsondata) => {
@@ -44,13 +55,13 @@ class App extends Component {
   }
 
   componentDidMount() {
+    // Disable console.log in production.
+    if (process.env.NODE_ENV === "production") console.log = function() {}
     // Configure scroll to anchor.
     configureAnchors({
       offset: -process.env.REACT_APP_ANCHOR_OFFSET,
       scrollDuration: process.env.REACT_APP_ANCHOR_SCROLL_DURATION
     })
-    // Disable console.log in production.
-    if (process.env.NODE_ENV === "production") console.log = function() {}
     // Show environment.
     console.log(process.env.NODE_ENV)
   }
@@ -85,43 +96,41 @@ class App extends Component {
           <Container className="pb-5 pt-4 animated fadeIn">
 
             <ScrollableAnchor id={this.state.data.contactDetails.id}>
-              <ContactDetails
-                data={this.state.data.contactDetails} />
+              {"showAll" in this.state.params ?
+                <ContactDetails data={this.state.data.contactDetails} />
+              :
+                <HiddenContent label="Sorry... These info are hidden" />
+              }
             </ScrollableAnchor>
 
             <hr/>
 
             <ScrollableAnchor id={this.state.data.profile.id}>
-              <Description
-                data={this.state.data.profile} />
+              <Description data={this.state.data.profile} />
             </ScrollableAnchor>
 
             <hr/>
 
             <ScrollableAnchor id={this.state.data.keyAttributes.id}>
-              <KeyAttributes
-                data={this.state.data.keyAttributes} />
+              <KeyAttributes data={this.state.data.keyAttributes} />
             </ScrollableAnchor>
 
             <hr/>
 
             <ScrollableAnchor id={this.state.data.spokenLanguages.id}>
-              <SpokenLanguages
-                data={this.state.data.spokenLanguages} />
+              <SpokenLanguages data={this.state.data.spokenLanguages} />
             </ScrollableAnchor>
 
             <hr/>
 
             <ScrollableAnchor id={this.state.data.personalInfo.id}>
-              <PersonalInfo
-                data={this.state.data.personalInfo} />
+              <PersonalInfo data={this.state.data.personalInfo} />
             </ScrollableAnchor>
 
             <hr/>
 
             <ScrollableAnchor id={this.state.data.activities.id}>
-              <Description
-                data={this.state.data.activities} />
+              <Description data={this.state.data.activities} />
             </ScrollableAnchor>
 
           </Container>

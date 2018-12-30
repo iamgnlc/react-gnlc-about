@@ -22,7 +22,7 @@ const Footer = React.memo(function Footer(props) {
           <FaHeart />
         </IconContext.Provider>
         and React
-        <IconContext.Provider value={{ className: "text-primary mx-1" }}>
+        <IconContext.Provider value={{ className: "text-primary spin rotate mx-1" }}>
           <FaReact />
         </IconContext.Provider>
         &mdash; by <b className="ml-1">GNLC</b>

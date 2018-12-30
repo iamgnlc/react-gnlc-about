@@ -94,7 +94,7 @@ class App extends Component {
         </ParallaxProvider> 
 
         <main className="main">
-          <Container className="pb-5 pt-4 animated fadeIn">
+          <Container className="pb-5 pt-4">
 
             <ScrollableAnchor id={this.state.data.contactDetails.id}>
               {"showAll" in this.state.params ?

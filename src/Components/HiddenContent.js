@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import handleViewport from 'react-in-viewport'
 
 import './HiddenContent.css'
 
@@ -8,10 +9,10 @@ import {
   Col
 } from 'reactstrap'
 
-class HiddenContent extends Component {
+class _HiddenContent extends Component {
   render() {
     return(
-      <Row className="hidden-content">
+      <Row className={`hidden-content animated ${this.props.inViewport ? "fadeIn" : "fadeOut"}`}>
         {this.props.label ?
           <Col xs={12} className="text-center heading-wrapper m-0 py-2">
             <h2 className="heading m-0">{this.props.label}</h2>
@@ -35,8 +36,11 @@ class HiddenContent extends Component {
   }
 }
 
-HiddenContent.propTypes = {
+_HiddenContent.propTypes = {
   label: PropTypes.string,
+  inViewport: PropTypes.bool,
 }
+
+const HiddenContent = handleViewport(_HiddenContent);
 
 export default HiddenContent

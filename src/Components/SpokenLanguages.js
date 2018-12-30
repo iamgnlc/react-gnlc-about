@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import handleViewport from 'react-in-viewport'
 
 import {
   Row,
@@ -7,10 +8,10 @@ import {
   Table
 } from 'reactstrap'
 
-class SpokenLanguages extends Component {
+class _SpokenLanguages extends Component {
   render() {
     return(
-      <Row className={this.props.data.id}>
+      <Row className={`${this.props.data.id} animated ${this.props.inViewport ? "fadeIn" : "fadeOut"}`}>
         <Col xs={12} className="text-center heading-wrapper mb-3 py-2">
           <h2 className="heading m-0" dangerouslySetInnerHTML={{ __html: this.props.data.title }}></h2>
         </Col>
@@ -54,8 +55,11 @@ class SpokenLanguages extends Component {
   }
 }
 
-SpokenLanguages.propTypes = {
+_SpokenLanguages.propTypes = {
   data: PropTypes.object,
+  inViewport: PropTypes.bool,
 }
+
+const SpokenLanguages = handleViewport(_SpokenLanguages);
 
 export default SpokenLanguages

@@ -6,16 +6,6 @@ import {
   Col
 } from 'reactstrap'
 
-const List = React.memo(function List(props) {
-  return(
-    <ul className="list pl-0 pl-sm-4 mb-4">
-      {props.data.map((paragraph, key) => {
-        return <li key={key} className="item text-justify mb-3" dangerouslySetInnerHTML={{ __html: paragraph }}></li>
-      })}
-    </ul>
-  )
-})
-
 class Education extends Component {
   render() {
     return(

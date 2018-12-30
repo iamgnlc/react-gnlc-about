@@ -41,7 +41,21 @@ strong,
 }
 .nav-menu {
   .nav-item {
-    white-space: nowrap;    
+    white-space: nowrap;
+    .short {
+      display: block;
+    }
+    .long {
+      display: none;
+    }
+    &:hover {
+      .short {
+        display: none;
+      }
+      .long {
+        display: block;
+      }  
+    }
   }
 }
 .hero {
@@ -117,6 +131,18 @@ hr {
   tbody th {
     border-width: 1px;
     border-color: $terminal-border-color;
+  }
+}
+@media (max-width: 767.98px) {
+  .nav-menu {
+    .nav-item {
+      .short {
+        display: none;
+      }
+      .long {
+        display: block;
+      }
+    }
   }
 }
 @media (max-width: 575.98px) {

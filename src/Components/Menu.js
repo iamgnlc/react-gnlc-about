@@ -27,8 +27,13 @@ class Menu extends Component {
     })
   }
 
+  getInitials = (str) => {
+    let matches = str.match(/\b(\w)/g)
+    return matches.join('')
+  }
+
   componentDidMount() {
-    window.addEventListener("hashchange", () => { 
+    window.addEventListener("hashchange", () => {
       this.setAnchor(window.location.hash)
     })
   }
@@ -50,7 +55,16 @@ class Menu extends Component {
                   // Execute callback.
                   this.props.callback()
                 }}
-              >~/{entry.name}</NavLink>
+              >
+                {anchor === this.state.anchor ?
+                  <span>~/{entry.name}</span>
+                :
+                  <React.Fragment>
+                    <span className="long">~/{entry.name}</span>
+                    <span className="short">~/{this.getInitials(entry.name)}&#8230;</span>
+                  </React.Fragment>
+                }
+              </NavLink>
             </NavItem>
           )
         })}

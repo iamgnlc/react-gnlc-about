@@ -12,8 +12,9 @@ import { FaHeart, FaCopyright, FaGithub, FaReact } from 'react-icons/fa'
 
 const Footer = React.memo(function Footer(props) {
   return (
-    <Navbar className="footer d-flex justify-content-center justify-content-sm-between" fixed="bottom" expand="md">
-      <small className="text-muted text-center text-md-left d-flex align-items-center animated fadeInUp">
+    <Navbar className="footer d-flex justify-content-center justify-content-sm-between" fixed="bottom">
+
+      <small className="mx-1 text-muted text-center text-md-left d-flex align-items-center animated fadeInUp">
         <IconContext.Provider value={{ className: "mr-1" }}>
           <FaCopyright />
         </IconContext.Provider>
@@ -28,12 +29,13 @@ const Footer = React.memo(function Footer(props) {
         &mdash; by <b className="ml-1">GNLC</b>
       </small>
       
-      <small className="d-flex align-items-center animated fadeInUp">
+      <small className="mx-1 d-flex align-items-center animated fadeInUp">
         <IconContext.Provider value={{ className: "mr-1" }}>
           <FaGithub />
         </IconContext.Provider>
         <a href={global.githubRepo} target="_blank" rel="noopener noreferrer">{global.githubRepo}</a>
       </small>
+
     </Navbar>
   )
 })

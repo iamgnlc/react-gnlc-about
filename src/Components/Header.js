@@ -40,7 +40,9 @@ class Header extends Component {
     return (
       <Navbar className="header navbar-terminal" fixed="top" dark expand="lg">
         <NavbarBrand href="/" className="mr-4 animated fadeInLeft">
-          {global.brand}
+          <div className="grow">
+            {global.brand}
+          </div>
         </NavbarBrand>
         <NavbarToggler onClick={this.toggleNav}>
           {this.state.isOpen ? <FaTimes /> : <FaEllipsisV /> }

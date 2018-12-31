@@ -45,7 +45,7 @@ List.propTypes = {
   data: PropTypes.array,
 }
 _KeyAttributes.propTypes = {
-  data: PropTypes.object,
+  data: PropTypes.object.isRequired,
   inViewport: PropTypes.bool,
 }
 

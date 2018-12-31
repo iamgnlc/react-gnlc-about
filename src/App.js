@@ -11,6 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'animate.css/animate.min.css'
 import './App.scss'
 
+import PrintContent from './Components/PrintContent.js'
 import Hero from './Components/Hero.js'
 import HiddenContent from './Components/HiddenContent.js'
 import Header from './Components/Header.js'
@@ -96,6 +97,8 @@ class App extends Component {
 
         <main className="main">
           <Container className="pb-5 pt-4">
+
+            <PrintContent content={global.printHeader} />
 
             <ScrollableAnchor id={this.state.data.contactDetails.id}>
               {"showAll" in this.state.params ?

@@ -12,7 +12,7 @@ import WordCloud from './WordCloud.js'
 class _Hero extends Component {
   render() {
     return(
-      <Row className={`animated ${this.props.inViewport ? "fadeIn" : "fadeOut"}`}>
+      <Row className={`animated d-print-none ${this.props.inViewport ? "fadeIn" : "fadeOut"}`}>
         <Col xs={12} className="d-flex align-items-center justify-content-center">
           <WordCloud />
         </Col>

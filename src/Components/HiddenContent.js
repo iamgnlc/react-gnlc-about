@@ -12,7 +12,7 @@ import {
 class _HiddenContent extends Component {
   render() {
     return(
-      <Row className={`hidden-content animated ${this.props.inViewport ? "fadeIn" : "fadeOut"}`}>
+      <Row className={`hidden-content d-print-none animated ${this.props.inViewport ? "fadeIn" : "fadeOut"}`}>
         {this.props.label ?
           <Col xs={12} className="text-center heading-wrapper m-0 py-2">
             <h2 className="heading m-0">{this.props.label}</h2>

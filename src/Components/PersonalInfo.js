@@ -32,7 +32,7 @@ class _PersonalInfo extends Component {
 }
 
 _PersonalInfo.propTypes = {
-  data: PropTypes.object,
+  data: PropTypes.object.isRequired,
   inViewport: PropTypes.bool,
 }
 

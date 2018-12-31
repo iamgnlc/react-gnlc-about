@@ -9,10 +9,11 @@ import {
 
 import { IconContext } from 'react-icons'
 import { FaHeart, FaCopyright, FaGithub, FaReact } from 'react-icons/fa'
+import { TiPrinter } from 'react-icons/ti'
 
 const Footer = React.memo(function Footer(props) {
   return (
-    <Navbar className="footer d-flex justify-content-center justify-content-sm-between" fixed="bottom">
+    <Navbar className="footer d-flex justify-content-center justify-content-sm-between d-print-none" fixed="bottom">
 
       <small className="mx-1 text-muted text-center text-md-left d-flex align-items-center animated fadeInUp">
         <IconContext.Provider value={{ className: "mr-1" }}>
@@ -28,6 +29,10 @@ const Footer = React.memo(function Footer(props) {
         </IconContext.Provider>
         &mdash; by <b className="ml-1">GNLC</b>
       </small>
+
+      <button className="print-me text-muted animated fadeInUp d-none d-sm-block btn btn-link p-0 border-0" onClick={() => {window.print()}}>
+        <TiPrinter />
+      </button>
       
       <small className="mx-1 d-flex align-items-center animated fadeInUp">
         <IconContext.Provider value={{ className: "mr-1" }}>
@@ -41,7 +46,7 @@ const Footer = React.memo(function Footer(props) {
 })
 
 Footer.propTypes = {
-  data: PropTypes.object,
+  data: PropTypes.object.isRequired,
 }
 
 export default Footer

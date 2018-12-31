@@ -32,7 +32,7 @@ class _Education extends Component {
 }
 
 _Education.propTypes = {
-  data: PropTypes.object,
+  data: PropTypes.object.isRequired,
   inViewport: PropTypes.bool,
 }
 

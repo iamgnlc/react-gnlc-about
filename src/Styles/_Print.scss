@@ -1,19 +1,11 @@
-$text-color: #000;
-
 @media print {
-  .navbar-terminal,
-  .footer,
-  .hidden-content,
-  .hero {
-    display: none;
-  }
   .fadeOut {
     animation-name: none;
   }
   body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #fff;
-    color: $text-color;
+    color: $print-text-color;
     margin: 0;
     padding: 0;
   }
@@ -24,9 +16,16 @@ $text-color: #000;
   b,
   strong,
   .text-bold {
-    color: $text-color;
+    color: $print-text-color;
     text-shadow: none;
   }
+  hr {
+    border-top: 1px solid $terminal-border-color;
+    width: 100%;
+    position: static;
+    margin-left: 0;
+    left: 0;
+  }  
   .title-wrapper,
   .heading-wrapper {
     position: static;

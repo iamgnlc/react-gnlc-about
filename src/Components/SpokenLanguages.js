@@ -56,7 +56,7 @@ class _SpokenLanguages extends Component {
 }
 
 _SpokenLanguages.propTypes = {
-  data: PropTypes.object,
+  data: PropTypes.object.isRequired,
   inViewport: PropTypes.bool,
 }
 

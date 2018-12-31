@@ -52,7 +52,7 @@ class _ContactDetails extends Component {
 }
 
 _ContactDetails.propTypes = {
-  data: PropTypes.object,
+  data: PropTypes.object.isRequired,
   inViewport: PropTypes.bool,
 }
 

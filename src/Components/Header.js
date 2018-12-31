@@ -49,7 +49,7 @@ class Header extends Component {
   
   render() {
     return (
-      <Navbar className="header navbar-terminal" fixed="top" dark expand="md">
+      <Navbar className="header navbar-terminal d-print-none" fixed="top" dark expand="md">
         <NavbarBrand onClick={this.toTop} className="mr-4 animated fadeInLeft">
           <div className="grow">
             {global.brand}

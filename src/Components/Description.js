@@ -21,7 +21,7 @@ class _Description extends Component {
 }
 
 _Description.propTypes = {
-  data: PropTypes.object,
+  data: PropTypes.object.isRequired,
   inViewport: PropTypes.bool,
 }
 

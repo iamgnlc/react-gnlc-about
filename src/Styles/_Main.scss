@@ -137,6 +137,12 @@ hr {
     border-color: $terminal-border-color;
   }
 }
+.print-me {
+  color: $terminal-text-color;
+  svg {
+    font-size: 1.5rem;
+  }
+}
 @media (max-width: 767.98px) {
   .nav-menu {
     .nav-item {

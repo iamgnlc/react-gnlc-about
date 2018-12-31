@@ -60,13 +60,13 @@ class App extends Component {
   componentDidMount() {
     // Disable console.log in production.
     if (process.env.NODE_ENV === "production") console.log = function() {}
+    // Show environment.
+    console.log(process.env.NODE_ENV)
     // Configure scroll to anchor.
     configureAnchors({
       offset: -process.env.REACT_APP_ANCHOR_OFFSET,
       scrollDuration: process.env.REACT_APP_ANCHOR_SCROLL_DURATION
     })
-    // Show environment.
-    console.log(process.env.NODE_ENV)
   }
 
   render() {

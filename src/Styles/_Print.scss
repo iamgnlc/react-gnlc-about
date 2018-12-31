@@ -1,0 +1,34 @@
+$text-color: #000;
+
+@media print {
+  .navbar-terminal,
+  .footer,
+  .hidden-content,
+  .hero {
+    display: none;
+  }
+  .fadeOut {
+    animation-name: none;
+  }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    color: $text-color;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    text-decoration: underline
+  }
+  a,
+  b,
+  strong,
+  .text-bold {
+    color: $text-color;
+    text-shadow: none;
+  }
+  .title-wrapper,
+  .heading-wrapper {
+    position: static;
+  }  
+}

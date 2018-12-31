@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import "../config/global.js"
 
@@ -44,9 +43,5 @@ const Footer = React.memo(function Footer(props) {
     </Navbar>
   )
 })
-
-Footer.propTypes = {
-  data: PropTypes.object.isRequired,
-}
 
 export default Footer

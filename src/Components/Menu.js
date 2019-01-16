@@ -1,16 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from "react"
 import PropTypes from "prop-types"
 
 import "../config/global.js"
 
-import {
-  Nav,
-  NavItem,
-  NavLink,
-} from 'reactstrap'
+import { Nav, NavItem, NavLink } from "reactstrap"
 
-import classNames from 'classnames'
-import { goToAnchor } from 'react-scrollable-anchor'
+import classNames from "classnames"
+import { goToAnchor } from "react-scrollable-anchor"
 
 class Menu extends Component {
   constructor(props) {
@@ -21,15 +17,15 @@ class Menu extends Component {
     }
   }
 
-  setAnchor = (anchor) => {
+  setAnchor = anchor => {
     this.setState({
-      anchor: anchor
+      anchor: anchor,
     })
   }
 
-  getInitials = (str) => {
+  getInitials = str => {
     let matches = str.match(/\b(\w)/g)
-    return matches.join('')
+    return matches.join("")
   }
 
   componentDidMount() {
@@ -39,14 +35,14 @@ class Menu extends Component {
   }
 
   render() {
-    return(
+    return (
       <Nav className="ml-auto animated fadeInRight nav-menu" navbar>
         {this.props.menu.map((entry, key) => {
           let anchor = "#" + entry.ref
-          return(
+          return (
             <NavItem key={key}>
               <NavLink
-                className={classNames({"active": anchor === this.state.anchor})}
+                className={classNames({ active: anchor === this.state.anchor })}
                 onClick={() => {
                   // Go to element.
                   goToAnchor(anchor, true)
@@ -56,14 +52,16 @@ class Menu extends Component {
                   this.props.callback()
                 }}
               >
-                {anchor === this.state.anchor ?
+                {anchor === this.state.anchor ? (
                   <span>~/{entry.name}</span>
-                :
+                ) : (
                   <React.Fragment>
                     <span className="long">~/{entry.name}</span>
-                    <span className="short">~/{this.getInitials(entry.name)}&#8230;</span>
+                    <span className="short">
+                      ~/{this.getInitials(entry.name)}&#8230;
+                    </span>
                   </React.Fragment>
-                }
+                )}
               </NavLink>
             </NavItem>
           )

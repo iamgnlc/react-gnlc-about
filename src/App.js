@@ -1,31 +1,29 @@
-import React, { Component } from 'react'
+import React, { Component } from "react"
 
-import jsonData from './config/data.json'
+import jsonData from "./config/data.json"
 import "./config/global.js"
 
-import {
-  Container,
-} from 'reactstrap'
+import { Container } from "reactstrap"
 
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'animate.css/animate.min.css'
-import './App.scss'
+import "bootstrap/dist/css/bootstrap.min.css"
+import "animate.css/animate.min.css"
+import "./App.scss"
 
-import PrintContent from './Components/PrintContent.js'
-import Hero from './Components/Hero.js'
-import HiddenContent from './Components/HiddenContent.js'
-import Header from './Components/Header.js'
-import Footer from './Components/Footer.js'
-import ContactDetails from './Components/ContactDetails.js'
-import Description from './Components/Description.js'
-import PersonalInfo from './Components/PersonalInfo.js'
-import KeyAttributes from './Components/KeyAttributes.js'
-import SpokenLanguages from './Components/SpokenLanguages.js'
-import Education from './Components/Education.js'
+import PrintContent from "./Components/PrintContent.js"
+import Hero from "./Components/Hero.js"
+import HiddenContent from "./Components/HiddenContent.js"
+import Header from "./Components/Header.js"
+import Footer from "./Components/Footer.js"
+import ContactDetails from "./Components/ContactDetails.js"
+import Description from "./Components/Description.js"
+import PersonalInfo from "./Components/PersonalInfo.js"
+import KeyAttributes from "./Components/KeyAttributes.js"
+import SpokenLanguages from "./Components/SpokenLanguages.js"
+import Education from "./Components/Education.js"
 
-import { Helmet } from 'react-helmet'
-import { ParallaxProvider, Parallax } from 'react-scroll-parallax'
-import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor'
+import { Helmet } from "react-helmet"
+import { ParallaxProvider, Parallax } from "react-scroll-parallax"
+import ScrollableAnchor, { configureAnchors } from "react-scrollable-anchor"
 
 class App extends Component {
   constructor(props) {
@@ -42,13 +40,13 @@ class App extends Component {
     let params = {}
     if (!window.location.search) return params
     let values = new URLSearchParams(window.location.search)
-    for(let param of values.entries()) { 
-      params[param[0]] = param[1] 
+    for (let param of values.entries()) {
+      params[param[0]] = param[1]
     }
     return params
   }
 
-  buildMenu = (jsondata) => {
+  buildMenu = jsondata => {
     let menu = []
     Object.keys(jsondata).map(section => {
       menu.push({ ref: jsondata[section].id, name: jsondata[section].id })
@@ -65,13 +63,12 @@ class App extends Component {
     // Configure scroll to anchor.
     configureAnchors({
       offset: -process.env.REACT_APP_ANCHOR_OFFSET,
-      scrollDuration: process.env.REACT_APP_ANCHOR_SCROLL_DURATION
+      scrollDuration: process.env.REACT_APP_ANCHOR_SCROLL_DURATION,
     })
   }
 
   render() {
     return (
-    
       <div id="App">
         <Helmet>
           <meta charSet="utf-8" />
@@ -93,64 +90,60 @@ class App extends Component {
               <Hero />
             </Parallax>
           </Container>
-        </ParallaxProvider> 
+        </ParallaxProvider>
 
         <main className="main">
           <Container className="pb-5 pt-4">
-
             <PrintContent content={global.printHeader} />
 
             <ScrollableAnchor id={this.state.data.contactDetails.id}>
-              {"showAll" in this.state.params ?
+              {"showAll" in this.state.params ? (
                 <ContactDetails data={this.state.data.contactDetails} />
-              :
+              ) : (
                 <HiddenContent label={this.state.data.contactDetails.title} />
-              }
+              )}
             </ScrollableAnchor>
 
-            <hr/>
+            <hr />
 
             <ScrollableAnchor id={this.state.data.profile.id}>
               <Description data={this.state.data.profile} />
             </ScrollableAnchor>
 
-            <hr/>
+            <hr />
 
             <ScrollableAnchor id={this.state.data.keyAttributes.id}>
               <KeyAttributes data={this.state.data.keyAttributes} />
             </ScrollableAnchor>
 
-            <hr/>
+            <hr />
 
             <ScrollableAnchor id={this.state.data.education.id}>
               <Education data={this.state.data.education} />
             </ScrollableAnchor>
 
-            <hr/>
+            <hr />
 
             <ScrollableAnchor id={this.state.data.spokenLanguages.id}>
               <SpokenLanguages data={this.state.data.spokenLanguages} />
             </ScrollableAnchor>
 
-            <hr/>
+            <hr />
 
             <ScrollableAnchor id={this.state.data.personalInfo.id}>
               <PersonalInfo data={this.state.data.personalInfo} />
             </ScrollableAnchor>
 
-            <hr/>
+            <hr />
 
             <ScrollableAnchor id={this.state.data.activities.id}>
               <Description data={this.state.data.activities} />
             </ScrollableAnchor>
-
           </Container>
         </main>
 
         <Footer />
-
       </div>
-
     )
   }
 }

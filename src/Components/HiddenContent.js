@@ -1,35 +1,38 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import handleViewport from 'react-in-viewport'
+import React, { Component } from "react"
+import PropTypes from "prop-types"
+import handleViewport from "react-in-viewport"
 
-import './HiddenContent.css'
+import "./HiddenContent.css"
 
-import {
-  Row,
-  Col
-} from 'reactstrap'
+import { Row, Col } from "reactstrap"
 
 class _HiddenContent extends Component {
   render() {
-    return(
-      <Row className={`hidden-content d-print-none animated ${this.props.inViewport ? "fadeIn" : "fadeOut"}`}>
-        {this.props.label ?
+    return (
+      <Row
+        className={`hidden-content d-print-none animated ${
+          this.props.inViewport ? "fadeIn" : "fadeOut"
+        }`}
+      >
+        {this.props.label ? (
           <Col xs={12} className="text-center heading-wrapper m-0 py-2">
             <h2 className="heading m-0">{this.props.label}</h2>
           </Col>
-        : null}
+        ) : null}
         <Col xs={12}>
           <div className="hidden-wrapper">
             <div className="hidden-wrapper-body">
-              <div className="hidden-avatar"></div>
-              <div className="hidden-author"></div>
-              <div className="hidden-label"></div>
-              <div className="hidden-content-1"></div>
-              <div className="hidden-content-2"></div>
-              <div className="hidden-content-3"></div>
+              <div className="hidden-avatar" />
+              <div className="hidden-author" />
+              <div className="hidden-label" />
+              <div className="hidden-content-1" />
+              <div className="hidden-content-2" />
+              <div className="hidden-content-3" />
             </div>
           </div>
-          <p className="text-center text-muted">Sorry, these informations are hidden.</p>
+          <p className="text-center text-muted">
+            Sorry, these informations are hidden.
+          </p>
         </Col>
       </Row>
     )
@@ -41,6 +44,6 @@ _HiddenContent.propTypes = {
   inViewport: PropTypes.bool,
 }
 
-const HiddenContent = handleViewport(_HiddenContent);
+const HiddenContent = handleViewport(_HiddenContent)
 
 export default HiddenContent

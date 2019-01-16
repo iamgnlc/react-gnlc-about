@@ -1,19 +1,14 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { Component } from "react"
+import PropTypes from "prop-types"
 
-import {
-  Collapse,
-  Navbar,
-  NavbarBrand,
-  NavbarToggler,
-} from 'reactstrap'
+import { Collapse, Navbar, NavbarBrand, NavbarToggler } from "reactstrap"
 
-import Menu from './Menu.js'
+import Menu from "./Menu.js"
 
-import { FaEllipsisV } from 'react-icons/fa'
-import { FaTimes } from 'react-icons/fa'
+import { FaEllipsisV } from "react-icons/fa"
+import { FaTimes } from "react-icons/fa"
 
-import { goToTop } from 'react-scrollable-anchor'
+import { goToTop } from "react-scrollable-anchor"
 
 class Header extends Component {
   constructor(props) {
@@ -27,7 +22,7 @@ class Header extends Component {
     }
   }
 
-  callback = (params) => {
+  callback = params => {
     this.closeNav()
   }
 
@@ -37,7 +32,7 @@ class Header extends Component {
 
   toggleNav = () => {
     this.setState({
-      isOpen: !this.state.isOpen
+      isOpen: !this.state.isOpen,
     })
   }
 
@@ -46,23 +41,27 @@ class Header extends Component {
     // Call child function.
     this.menuRef.current.setAnchor(false)
   }
-  
+
   render() {
     return (
-      <Navbar className="header navbar-terminal d-print-none" fixed="top" dark expand="md">
+      <Navbar
+        className="header navbar-terminal d-print-none"
+        fixed="top"
+        dark
+        expand="md"
+      >
         <NavbarBrand onClick={this.toTop} className="mr-4 animated fadeInLeft">
-          <div className="grow">
-            {global.brand}
-          </div>
+          <div className="grow">{global.brand}</div>
         </NavbarBrand>
         <NavbarToggler onClick={this.toggleNav}>
-          {this.state.isOpen ? <FaTimes /> : <FaEllipsisV /> }
+          {this.state.isOpen ? <FaTimes /> : <FaEllipsisV />}
         </NavbarToggler>
         <Collapse isOpen={this.state.isOpen} navbar>
           <Menu
             ref={this.menuRef}
             menu={this.props.menu}
-            callback={this.callback} />
+            callback={this.callback}
+          />
         </Collapse>
       </Navbar>
     )

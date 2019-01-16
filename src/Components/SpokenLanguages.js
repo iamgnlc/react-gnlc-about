@@ -1,56 +1,131 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import handleViewport from 'react-in-viewport'
+import React, { Component } from "react"
+import PropTypes from "prop-types"
+import handleViewport from "react-in-viewport"
 
-import {
-  Row,
-  Col,
-  Table
-} from 'reactstrap'
+import { Row, Col, Table } from "reactstrap"
 
 class _SpokenLanguages extends Component {
   render() {
-    return(
-      <Row className={`${this.props.data.id} animated ${this.props.inViewport ? "fadeIn" : "fadeOut"}`}>
+    return (
+      <Row
+        className={`${this.props.data.id} animated ${
+          this.props.inViewport ? "fadeIn" : "fadeOut"
+        }`}
+      >
         <Col xs={12} className="text-center heading-wrapper mb-3 py-2">
-          <h2 className="heading m-0" dangerouslySetInnerHTML={{ __html: this.props.data.title }}></h2>
+          <h2
+            className="heading m-0"
+            dangerouslySetInnerHTML={{ __html: this.props.data.title }}
+          />
         </Col>
         <Col xs={12}>
-
           <Table responsive>
             <thead>
               <tr>
-                <th></th>
-                <th className="text-center" dangerouslySetInnerHTML={{ __html: this.props.data.headRow[0] }}></th>
-                <th className="text-center" dangerouslySetInnerHTML={{ __html: this.props.data.headRow[1] }}></th>
-                <th className="text-center" dangerouslySetInnerHTML={{ __html: this.props.data.headRow[2] }}></th>
+                <th />
+                <th
+                  className="text-center"
+                  dangerouslySetInnerHTML={{
+                    __html: this.props.data.headRow[0],
+                  }}
+                />
+                <th
+                  className="text-center"
+                  dangerouslySetInnerHTML={{
+                    __html: this.props.data.headRow[1],
+                  }}
+                />
+                <th
+                  className="text-center"
+                  dangerouslySetInnerHTML={{
+                    __html: this.props.data.headRow[2],
+                  }}
+                />
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th scope="row" dangerouslySetInnerHTML={{ __html: this.props.data.headCol[0] }}></th>
-                <td className="text-center" dangerouslySetInnerHTML={{ __html: this.props.data.table.itRead }}></td>
-                <td className="text-center" dangerouslySetInnerHTML={{ __html: this.props.data.table.enRead }}></td>
-                <td className="text-center" dangerouslySetInnerHTML={{ __html: this.props.data.table.tenRead }}></td>
+                <th
+                  scope="row"
+                  dangerouslySetInnerHTML={{
+                    __html: this.props.data.headCol[0],
+                  }}
+                />
+                <td
+                  className="text-center"
+                  dangerouslySetInnerHTML={{
+                    __html: this.props.data.table.itRead,
+                  }}
+                />
+                <td
+                  className="text-center"
+                  dangerouslySetInnerHTML={{
+                    __html: this.props.data.table.enRead,
+                  }}
+                />
+                <td
+                  className="text-center"
+                  dangerouslySetInnerHTML={{
+                    __html: this.props.data.table.tenRead,
+                  }}
+                />
               </tr>
               <tr>
-                <th scope="row" dangerouslySetInnerHTML={{ __html: this.props.data.headCol[1] }}></th>
-                <td className="text-center" dangerouslySetInnerHTML={{ __html: this.props.data.table.itWrite }}></td>
-                <td className="text-center" dangerouslySetInnerHTML={{ __html: this.props.data.table.enWrite }}></td>
-                <td className="text-center" dangerouslySetInnerHTML={{ __html: this.props.data.table.tenWrite }}></td>
+                <th
+                  scope="row"
+                  dangerouslySetInnerHTML={{
+                    __html: this.props.data.headCol[1],
+                  }}
+                />
+                <td
+                  className="text-center"
+                  dangerouslySetInnerHTML={{
+                    __html: this.props.data.table.itWrite,
+                  }}
+                />
+                <td
+                  className="text-center"
+                  dangerouslySetInnerHTML={{
+                    __html: this.props.data.table.enWrite,
+                  }}
+                />
+                <td
+                  className="text-center"
+                  dangerouslySetInnerHTML={{
+                    __html: this.props.data.table.tenWrite,
+                  }}
+                />
               </tr>
               <tr>
-                <th scope="row" dangerouslySetInnerHTML={{ __html: this.props.data.headCol[2] }}></th>
-                <td className="text-center" dangerouslySetInnerHTML={{ __html: this.props.data.table.itVerb }}></td>
-                <td className="text-center" dangerouslySetInnerHTML={{ __html: this.props.data.table.enVerb }}></td>
-                <td className="text-center" dangerouslySetInnerHTML={{ __html: this.props.data.table.tenVerb }}></td>
+                <th
+                  scope="row"
+                  dangerouslySetInnerHTML={{
+                    __html: this.props.data.headCol[2],
+                  }}
+                />
+                <td
+                  className="text-center"
+                  dangerouslySetInnerHTML={{
+                    __html: this.props.data.table.itVerb,
+                  }}
+                />
+                <td
+                  className="text-center"
+                  dangerouslySetInnerHTML={{
+                    __html: this.props.data.table.enVerb,
+                  }}
+                />
+                <td
+                  className="text-center"
+                  dangerouslySetInnerHTML={{
+                    __html: this.props.data.table.tenVerb,
+                  }}
+                />
               </tr>
             </tbody>
           </Table>
-
         </Col>
       </Row>
-
     )
   }
 }
@@ -60,6 +135,6 @@ _SpokenLanguages.propTypes = {
   inViewport: PropTypes.bool,
 }
 
-const SpokenLanguages = handleViewport(_SpokenLanguages);
+const SpokenLanguages = handleViewport(_SpokenLanguages)
 
 export default SpokenLanguages

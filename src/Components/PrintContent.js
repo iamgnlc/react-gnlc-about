@@ -1,14 +1,11 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { Component } from "react"
+import PropTypes from "prop-types"
 
-import {
-  Row,
-  Col
-} from 'reactstrap'
+import { Row, Col } from "reactstrap"
 
 class PrintContent extends Component {
   render() {
-    return(
+    return (
       <Row className="print-content d-none d-print-block">
         <Col xs={12} dangerouslySetInnerHTML={{ __html: this.props.content }} />
       </Row>

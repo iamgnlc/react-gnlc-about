@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <meta name="robots" content="noindex" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.png" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.png" />
+    <title>GNLC CV</title>
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="robots" content="noindex" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.png" />
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.png" />
-  <title>GNLC CV</title>
-</head>
-
-<body>
-  <noscript>
-    No Javascript, No Joy...
-  </noscript>
-  <div id="root"></div>
-</body>
-<!--
+  <body>
+    <noscript> No Javascript, No Joy... </noscript>
+    <div id="root"></div>
+  </body>
+  <!--
 
   ________  _______  .____   _________                                                    
  /  _____/  \      \ |    |  \_   ___ \                                                   
@@ -41,18 +41,17 @@ ____   ____.___________________  ___________
    \___/   |___| |____|\____|__  /_______  /                                              
                                \/        \/                                               
 -->
-<script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCNRD8hbXsomLf1FLek-1sDr8CHQx_nutY",
-    authDomain: "gnlc-cv.firebaseapp.com",
-    databaseURL: "https://gnlc-cv.firebaseio.com",
-    projectId: "gnlc-cv",
-    storageBucket: "",
-    messagingSenderId: "60865871714"
-  };
-  firebase.initializeApp(config);
-</script>
-
+  <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCNRD8hbXsomLf1FLek-1sDr8CHQx_nutY",
+      authDomain: "gnlc-cv.firebaseapp.com",
+      databaseURL: "https://gnlc-cv.firebaseio.com",
+      projectId: "gnlc-cv",
+      storageBucket: "",
+      messagingSenderId: "60865871714",
+    }
+    firebase.initializeApp(config)
+  </script>
 </html>

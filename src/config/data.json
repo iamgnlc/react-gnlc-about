@@ -11,16 +11,9 @@
       "county": "Hertfordshire",
       "country": "UK"
     },
-    "phoneNumber": [
-      "+44 7426 713188"
-    ],
-    "email": [
-      "gianluca.agnocchetti@gmail.com"
-    ],
-    "web": [
-      "http://gianluca.co.nf",
-      "http://gnlc.me"
-    ],
+    "phoneNumber": ["+44 7426 713188"],
+    "email": ["gianluca.agnocchetti@gmail.com"],
+    "web": ["http://gianluca.co.nf", "http://gnlc.me"],
     "social": [
       "https://www.facebook.com/ggnnllcc",
       "https://linkedin.com/in/iamgnlc",
@@ -192,11 +185,7 @@
       "English",
       "Technical English<br/><small>(Electronic and IT focused)</small>"
     ],
-    "headCol": [
-      "Reading",
-      "Writing",
-      "Verbal"
-    ],
+    "headCol": ["Reading", "Writing", "Verbal"],
     "table": {
       "itRead": "Excellent",
       "itWrite": "Excellent",

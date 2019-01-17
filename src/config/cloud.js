@@ -56,6 +56,7 @@ const cloud = [
   { text: "Vagrant", value: 5 },
   { text: "PhotoShop", value: 3 },
   { text: "Illustrator", value: 3 },
+  { text: "Ableton Live", value: 3 },
 ]
 
 export default cloud

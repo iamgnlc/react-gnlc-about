@@ -4,6 +4,7 @@ import PropTypes from "prop-types"
 import { Collapse, Navbar, NavbarBrand, NavbarToggler } from "reactstrap"
 
 import Menu from "./Menu.js"
+import Avatar from "./Avatar.js"
 
 import { FaEllipsisV } from "react-icons/fa"
 import { FaTimes } from "react-icons/fa"
@@ -22,7 +23,7 @@ class Header extends Component {
     }
   }
 
-  callback = params => {
+  callback = (params) => {
     this.closeNav()
   }
 
@@ -51,6 +52,7 @@ class Header extends Component {
         expand="md"
       >
         <NavbarBrand onClick={this.toTop} className="mr-4 animated fadeInLeft">
+          <Avatar />
           <div className="grow">{global.brand}</div>
         </NavbarBrand>
         <NavbarToggler onClick={this.toggleNav}>

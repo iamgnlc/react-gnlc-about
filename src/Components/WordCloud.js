@@ -40,11 +40,12 @@ class WordCloud extends Component {
         className="d-none d-sm-block"
         style={cloudStyle}
       >
-        {cloud.map(word => {
+        {cloud.map((word, index) => {
           let tagStyle = {
             fontSize: word.value * 6,
             opacity: word.value / 10,
             padding: word.value * 1.5,
+            zIndex: -index,
           }
           return this.renderWord(word.text, tagStyle)
         })}
@@ -59,11 +60,12 @@ class WordCloud extends Component {
         className="d-block d-sm-none"
         style={cloudStyle}
       >
-        {cloud.map(word => {
+        {cloud.map((word, index) => {
           let tagStyle = {
             fontSize: word.value * 3,
             opacity: word.value / 10,
             padding: word.value * 0.75,
+            zIndex: -index,
           }
           return this.renderWord(word.text, tagStyle)
         })}

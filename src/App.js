@@ -46,9 +46,9 @@ class App extends Component {
     return params
   }
 
-  buildMenu = jsondata => {
+  buildMenu = (jsondata) => {
     let menu = []
-    Object.keys(jsondata).map(section => {
+    Object.keys(jsondata).map((section) => {
       menu.push({ ref: jsondata[section].id, name: jsondata[section].id })
       return true
     })

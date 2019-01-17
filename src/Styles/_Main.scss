@@ -58,6 +58,14 @@ strong,
     }
   }
 }
+.avatar {
+  border-radius: 50%;
+  width: 32px;
+  height: auto;
+  float: left;
+  border: 1px solid $terminal-text-color;
+  box-sizing: border-box;
+}
 .hero {
   background-color: $terminal-hero;
   overflow: hidden;
@@ -72,7 +80,7 @@ strong,
 .footer {
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-  background-color: rgba($terminal-navbar, 0.95);
+  background-color: rgba($terminal-navbar, 0.925);
   box-shadow: 0px 0px 5px 0px rgba(#000, 0.35);
 }
 .navbar-terminal {

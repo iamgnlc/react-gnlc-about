@@ -11,12 +11,21 @@ class _HiddenContent extends Component {
     return (
       <Row
         className={`hidden-content d-print-none animated ${
-          this.props.inViewport ? "fadeIn" : "fadeOut"
+          this.props.inViewport
+            ? global.sectionAnimation.in
+            : global.sectionAnimation.out
         }`}
       >
         {this.props.label ? (
           <Col xs={12} className="text-center heading-wrapper m-0 py-2">
-            <h2 className="heading m-0">{this.props.label}</h2>
+            <h2
+              className={`heading m-0 animated ${
+                this.props.inViewport
+                  ? global.headingAnimation.in
+                  : global.headingAnimation.out
+              }`}
+              dangerouslySetInnerHTML={{ __html: this.props.label }}
+            />
           </Col>
         ) : null}
         <Col xs={12}>

@@ -4,6 +4,7 @@
     transform: scale(1.1);
   }
 }
+
 .spin {
   -webkit-animation: spin $spin-interval linear infinite;
   -moz-animation: spin $spin-interval linear infinite;
@@ -23,5 +24,11 @@
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
+  }
+}
+
+@for $i from 1 through 5 {
+  .animation-delay-#{$i + "00"} {
+    animation-delay: #{"." + $i + "s"};
   }
 }

@@ -11,7 +11,9 @@ class _Hero extends Component {
     return (
       <Row
         className={`animated d-print-none ${
-          this.props.inViewport ? "fadeIn" : "fadeOut"
+          this.props.inViewport
+            ? global.sectionAnimation.in
+            : global.sectionAnimation.out
         }`}
       >
         <Col

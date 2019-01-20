@@ -9,12 +9,18 @@ class _PersonalInfo extends Component {
     return (
       <Row
         className={`${this.props.data.id} animated ${
-          this.props.inViewport ? "fadeIn" : "fadeOut"
+          this.props.inViewport
+            ? global.sectionAnimation.in
+            : global.sectionAnimation.out
         }`}
       >
         <Col xs={12} className="text-center heading-wrapper mb-3 py-2">
           <h2
-            className="heading m-0"
+            className={`heading m-0 animated ${
+              this.props.inViewport
+                ? global.headingAnimation.in
+                : global.headingAnimation.out
+            }`}
             dangerouslySetInnerHTML={{ __html: this.props.data.title }}
           />
         </Col>

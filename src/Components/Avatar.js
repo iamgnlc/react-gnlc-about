@@ -6,7 +6,7 @@ import avatar from "../Images/avatar.jpg"
 
 class Avatar extends Component {
   render() {
-    return <Media object src={avatar} className="avatar mr-2" />
+    return <Media object src={avatar} className="avatar rotate mr-2" />
   }
 }
 

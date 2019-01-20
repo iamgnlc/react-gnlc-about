@@ -5,7 +5,7 @@ global.meta = {
   description: "Curriculum Vitae of Gianluca Agnocchetti",
 }
 
-global.brand = "gnlc@localhost ~ $"
+global.brand = "gnlc@localhost ~ $"
 
 global.githubRepo = "https://github.com/iamgnlc/cv"
 

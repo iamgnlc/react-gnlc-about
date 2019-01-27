@@ -6,6 +6,8 @@ import "./HiddenContent.css"
 
 import { Row, Col } from "reactstrap"
 
+import Heading from "./Shared/Heading"
+
 class _HiddenContent extends Component {
   render() {
     return (

@@ -2,6 +2,8 @@ import React, { Component } from "react"
 import PropTypes from "prop-types"
 import handleViewport from "react-in-viewport"
 
+import Heading from "./Shared/Heading"
+
 import { Row, Col } from "reactstrap"
 
 import Mailto from "react-protected-mailto"
@@ -17,13 +19,9 @@ class _ContactDetails extends Component {
         }`}
       >
         <Col xs={12} className="text-center heading-wrapper mb-3 py-2">
-          <h2
-            className={`heading m-0 animated ${
-              this.props.inViewport
-                ? global.headingAnimation.in
-                : global.headingAnimation.out
-            }`}
-            dangerouslySetInnerHTML={{ __html: this.props.data.title }}
+          <Heading
+            label={this.props.data.title}
+            inViewport={this.props.inViewport}
           />
         </Col>
         <Col xs={12} sm={6}>

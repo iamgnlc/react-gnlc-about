@@ -37,6 +37,7 @@
   }
 }
 
+// Delays.
 @for $i from 1 through 5 {
   .animation-delay-#{$i + "00"} {
     animation-delay: #{"." + $i + "s"};

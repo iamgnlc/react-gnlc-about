@@ -20,13 +20,9 @@ class _HiddenContent extends Component {
       >
         {this.props.label ? (
           <Col xs={12} className="text-center heading-wrapper m-0 py-2">
-            <h2
-              className={`heading m-0 animated ${
-                this.props.inViewport
-                  ? global.headingAnimation.in
-                  : global.headingAnimation.out
-              }`}
-              dangerouslySetInnerHTML={{ __html: this.props.label }}
+            <Heading
+              label={this.props.label}
+              inViewport={this.props.inViewport}
             />
           </Col>
         ) : null}

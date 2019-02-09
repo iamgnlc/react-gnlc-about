@@ -22,7 +22,7 @@ class _PersonalInfo extends Component {
             inViewport={this.props.inViewport}
           />
         </Col>
-        <Col xs={4} sm={2} className="text-md-right">
+        <Col xs={4} sm={3} className="text-md-right">
           <h5 className="title">Date of birth</h5>
         </Col>
         <Col xs={8} sm={4}>
@@ -31,10 +31,10 @@ class _PersonalInfo extends Component {
         <Col xs={4} sm={2} className="text-md-right">
           <h5 className="title">Gender</h5>
         </Col>
-        <Col xs={8} sm={4}>
+        <Col xs={8} sm={3}>
           <p dangerouslySetInnerHTML={{ __html: this.props.data.gender }} />
         </Col>
-        <Col xs={4} sm={2} className="text-md-right">
+        <Col xs={4} sm={3} className="text-md-right">
           <h5 className="title">Driving licence</h5>
         </Col>
         <Col xs={8} sm={4}>
@@ -45,12 +45,12 @@ class _PersonalInfo extends Component {
         <Col xs={4} sm={2} className="text-md-right">
           <h5 className="title">Nationality</h5>
         </Col>
-        <Col xs={8} sm={4}>
+        <Col xs={8} sm={3}>
           <p
             dangerouslySetInnerHTML={{ __html: this.props.data.nationality }}
           />
         </Col>
-        <Col xs={4} sm={2} className="text-md-right">
+        <Col xs={4} sm={3} className="text-md-right">
           <h5 className="title">UK work permit</h5>
         </Col>
         <Col xs={8} sm={4}>
@@ -59,7 +59,7 @@ class _PersonalInfo extends Component {
         <Col xs={4} sm={2} className="text-md-right">
           <h5 className="title">N.I. No.</h5>
         </Col>
-        <Col xs={8} sm={4}>
+        <Col xs={8} sm={3}>
           <p dangerouslySetInnerHTML={{ __html: this.props.data.nino }} />
         </Col>
       </Row>

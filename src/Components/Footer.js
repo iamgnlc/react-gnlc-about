@@ -8,7 +8,7 @@ import { IconContext } from "react-icons"
 import { FaHeart, FaCopyright, FaGithub, FaReact } from "react-icons/fa"
 import { TiPrinter } from "react-icons/ti"
 
-const Footer = React.memo(function Footer(props) {
+const Footer = React.memo(function Footer() {
   return (
     <Navbar
       className="footer d-flex justify-content-center justify-content-sm-between d-print-none"
@@ -30,7 +30,7 @@ const Footer = React.memo(function Footer(props) {
         >
           <FaReact />
         </IconContext.Provider>
-        &mdash; by <b className="ml-1">GNLC</b>
+        &mdash; by <b className="ml-1">{global.meta.author}</b>
       </small>
 
       <button

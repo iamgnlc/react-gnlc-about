@@ -110,6 +110,7 @@ strong,
 .title {
   color: $terminal-title-color;
   text-shadow: 1px 1px 0px #000;
+  overflow-wrap: break-word;
 }
 .title-wrapper {
   background-color: $terminal-background;

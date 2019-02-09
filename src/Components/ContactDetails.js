@@ -24,18 +24,18 @@ class _ContactDetails extends Component {
             inViewport={this.props.inViewport}
           />
         </Col>
-        <Col xs={12} sm={6}>
+        <Col xs={12} sm={5} md={6}>
           <Row>
-            <Col xs={12} sm={4} className="text-md-right">
+            <Col xs={12} md={4} className="text-md-right">
               <h5 className="title">Full Name</h5>
             </Col>
-            <Col xs={12} sm={8}>
+            <Col xs={12} md={8}>
               <p>{this.props.data.fullName}</p>
             </Col>
-            <Col xs={12} sm={4} className="text-md-right">
+            <Col xs={12} md={4} className="text-md-right">
               <h5 className="title">Home Address</h5>
             </Col>
-            <Col xs={12} sm={8}>
+            <Col xs={12} md={8}>
               <p>
                 {this.props.data.homeAddress.road}
                 <br />
@@ -47,10 +47,10 @@ class _ContactDetails extends Component {
                 {this.props.data.homeAddress.country}
               </p>
             </Col>
-            <Col xs={12} sm={4} className="text-md-right">
+            <Col xs={12} md={4} className="text-md-right">
               <h5 className="title">Telephone</h5>
             </Col>
-            <Col xs={12} sm={8}>
+            <Col xs={12} md={8}>
               <p>
                 {this.props.data.phoneNumber.map((phoneNumber, key) => {
                   return <Mailto key={key} tel={phoneNumber} />
@@ -59,22 +59,22 @@ class _ContactDetails extends Component {
             </Col>
           </Row>
         </Col>
-        <Col xs={12} sm={6}>
+        <Col xs={12} sm={7} md={6}>
           <Row>
-            <Col xs={12} sm={4} className="text-md-right">
+            <Col xs={12} md={4} className="text-md-right">
               <h5 className="title">Email</h5>
             </Col>
-            <Col xs={12} sm={8}>
+            <Col xs={12} md={8}>
               <p>
                 {this.props.data.email.map((email, key) => {
                   return <Mailto key={key} email={email} />
                 })}
               </p>
             </Col>
-            <Col xs={12} sm={4} className="text-md-right">
+            <Col xs={12} md={4} className="text-md-right">
               <h5 className="title">Web</h5>
             </Col>
-            <Col xs={12} sm={8}>
+            <Col xs={12} md={8}>
               <p>
                 {this.props.data.web.map((url, key) => {
                   return (
@@ -91,10 +91,10 @@ class _ContactDetails extends Component {
                 })}
               </p>
             </Col>
-            <Col xs={12} sm={4} className="text-md-right">
+            <Col xs={12} md={4} className="text-md-right">
               <h5 className="title">Social</h5>
             </Col>
-            <Col xs={12} sm={8}>
+            <Col xs={12} md={8}>
               <p>
                 {this.props.data.social.map((url, key) => {
                   return (

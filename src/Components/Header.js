@@ -1,15 +1,13 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
+import { goToTop } from "react-scrollable-anchor"
 
+import { FaEllipsisV } from "react-icons/fa"
+import { FaTimes } from "react-icons/fa"
 import { Collapse, Navbar, NavbarBrand, NavbarToggler } from "reactstrap"
 
 import Menu from "./Menu.js"
 import Avatar from "./Avatar.js"
-
-import { FaEllipsisV } from "react-icons/fa"
-import { FaTimes } from "react-icons/fa"
-
-import { goToTop } from "react-scrollable-anchor"
 
 class Header extends Component {
   constructor(props) {

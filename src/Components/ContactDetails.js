@@ -1,12 +1,11 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 import handleViewport from "react-in-viewport"
+import Mailto from "react-protected-mailto"
 
 import Heading from "./Shared/Heading"
 
 import { Row, Col } from "reactstrap"
-
-import Mailto from "react-protected-mailto"
 
 class _ContactDetails extends Component {
   render() {

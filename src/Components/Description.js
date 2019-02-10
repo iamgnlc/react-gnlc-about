@@ -2,9 +2,9 @@ import React, { Component } from "react"
 import PropTypes from "prop-types"
 import handleViewport from "react-in-viewport"
 
-import Heading from "./Shared/Heading"
-
 import { Row, Col } from "reactstrap"
+
+import Heading from "./Shared/Heading"
 
 class _Description extends Component {
   render() {

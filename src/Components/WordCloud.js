@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-
 import TagCloud from "react-tag-cloud"
 
 import cloud from "../config/cloud.js"

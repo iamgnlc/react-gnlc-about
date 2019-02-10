@@ -1,12 +1,11 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
-
-import "../config/global.js"
+import classNames from "classnames"
+import { goToAnchor } from "react-scrollable-anchor"
 
 import { Nav, NavItem, NavLink } from "reactstrap"
 
-import classNames from "classnames"
-import { goToAnchor } from "react-scrollable-anchor"
+import "../config/global.js"
 
 class Menu extends Component {
   constructor(props) {
@@ -17,13 +16,13 @@ class Menu extends Component {
     }
   }
 
-  setAnchor = anchor => {
+  setAnchor = (anchor) => {
     this.setState({
       anchor: anchor,
     })
   }
 
-  getInitials = str => {
+  getInitials = (str) => {
     let matches = str.match(/\b(\w)/g)
     return matches.join("")
   }

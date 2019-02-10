@@ -1,12 +1,12 @@
 import React from "react"
 
-import "../config/global.js"
-
 import { Navbar } from "reactstrap"
 
 import { IconContext } from "react-icons"
 import { FaHeart, FaCopyright, FaGithub, FaReact } from "react-icons/fa"
 import { TiPrinter } from "react-icons/ti"
+
+import "../config/global.js"
 
 const Footer = React.memo(function Footer() {
   return (

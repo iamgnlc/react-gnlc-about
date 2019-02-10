@@ -1,9 +1,12 @@
 import React, { Component } from "react"
+import { Helmet } from "react-helmet"
+import { ParallaxProvider, Parallax } from "react-scroll-parallax"
+import ScrollableAnchor, { configureAnchors } from "react-scrollable-anchor"
+
+import { Container } from "reactstrap"
 
 import jsonData from "./config/data.json"
 import "./config/global.js"
-
-import { Container } from "reactstrap"
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import "animate.css/animate.min.css"
@@ -21,10 +24,6 @@ import KeyAttributes from "./Components/KeyAttributes.js"
 import SpokenLanguages from "./Components/SpokenLanguages.js"
 import Education from "./Components/Education.js"
 
-import { Helmet } from "react-helmet"
-import { ParallaxProvider, Parallax } from "react-scroll-parallax"
-import ScrollableAnchor, { configureAnchors } from "react-scrollable-anchor"
-
 class App extends Component {
   constructor(props) {
     super(props)
@@ -32,18 +31,18 @@ class App extends Component {
     this.state = {
       data: jsonData,
       menu: this.buildMenu(jsonData),
-      params: this.setParams(),
+      queryParams: this.setQueryParams(),
     }
   }
 
-  setParams = () => {
-    let params = {}
-    if (!window.location.search) return params
+  setQueryParams = () => {
+    let queryParams = {}
+    if (!window.location.search) return queryParams
     let values = new URLSearchParams(window.location.search)
     for (let param of values.entries()) {
-      params[param[0]] = param[1]
+      queryParams[param[0]] = param[1]
     }
-    return params
+    return queryParams
   }
 
   buildMenu = (jsondata) => {
@@ -75,7 +74,6 @@ class App extends Component {
           <title>{global.title}</title>
           <meta name="author" content={global.meta.author} />
           <meta name="description" content={global.meta.description} />
-          <meta name="robots" content="noindex" />
         </Helmet>
 
         <Header menu={this.state.menu} />
@@ -97,7 +95,7 @@ class App extends Component {
             <PrintContent content={global.printHeader} />
 
             <ScrollableAnchor id={this.state.data.contactDetails.id}>
-              {"showAll" in this.state.params ? (
+              {"showAll" in this.state.queryParams ? (
                 <ContactDetails data={this.state.data.contactDetails} />
               ) : (
                 <HiddenContent label={this.state.data.contactDetails.title} />

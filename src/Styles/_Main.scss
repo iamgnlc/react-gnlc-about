@@ -145,6 +145,10 @@ hr {
     border-width: 1px;
     border-color: $terminal-border-color;
   }
+  small {
+    display: block;
+    line-height: 1.2;
+  }
 }
 .print-me {
   color: $terminal-text-color;

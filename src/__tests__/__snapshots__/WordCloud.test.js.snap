@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`wordcloud component should render without crashing 1`] = `
+Array [
+  <div
+    className="d-none d-sm-block"
+    onClick={[Function]}
+    style={
+      Object {
+        "height": "calc(100vh - 100px)",
+        "width": "100%",
+      }
+    }
+  />,
+  <div
+    className="d-block d-sm-none"
+    onClick={[Function]}
+    style={
+      Object {
+        "height": "calc(100vh - 100px)",
+        "width": "100%",
+      }
+    }
+  />,
+]
+`;

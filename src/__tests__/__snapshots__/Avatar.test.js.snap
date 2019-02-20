@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`avatar component should render without crashing 1`] = `
+<img
+  className="avatar rotate mr-2 media-object"
+  src="avatar.jpg"
+/>
+`;

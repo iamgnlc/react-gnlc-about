@@ -1,0 +1,15 @@
+version: "3.5"
+
+services:
+  about-gnlc-me:
+    container_name: about-gnlc-me-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ".:/usr/src/app"
+      - "/usr/src/app/node_modules"
+    ports:
+      - "${PORT}:${PORT}"
+    environment:
+      - NODE_ENV=development

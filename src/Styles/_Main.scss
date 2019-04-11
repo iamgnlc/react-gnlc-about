@@ -84,16 +84,17 @@ strong,
   box-shadow: 0px 0px 5px 0px rgba(#000, 0.35);
 }
 .navbar-terminal {
-  .navbar-brand,
-  .navbar-brand:active,
-  .navbar-brand:focus,
-  .navbar-brand:hover,
-  .navbar-brand:not([href]),
-  .navbar-brand:not([tabindex]),
-  .navbar-brand:not([href]):hover,
-  .navbar-brand:not([tabindex]):hover {
-    color: $terminal-brand-color;
-    white-space: nowrap;
+  .navbar-brand {
+    &:active,
+    &:focus,
+    &:hover,
+    &:not([href]),
+    &:not([tabindex]),
+    &:not([href]):hover,
+    &:not([tabindex]):hover {
+      color: $terminal-brand-color;
+      white-space: nowrap;
+    }
   }
 }
 .navbar-dark {

@@ -1,0 +1,56 @@
+{
+  "plugins": ["react"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "arrowFunctions": true,
+      "binaryLiterals": true,
+      "blockBindings": true,
+      "classes": true,
+      "defaultParams": true,
+      "destructuring": true,
+      "forOf": true,
+      "generators": true,
+      "modules": true,
+      "objectLiteralComputedProperties": true,
+      "objectLiteralDuplicateProperties": true,
+      "objectLiteralShorthandMethods": true,
+      "objectLiteralShorthandProperties": true,
+      "octalLiterals": true,
+      "regexUFlag": true,
+      "regexYFlag": true,
+      "spread": true,
+      "superInFunctions": true,
+      "templateStrings": true,
+      "unicodeCodePointEscapes": true,
+      "globalReturn": true,
+      "jsx": true,
+      "impliedStrict": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "eslint-config-prettier"
+  ],
+  "rules": {
+    "no-console": 0 // allow use of console (off by default in the node environment)
+    // "semi": ["error", "never"],
+    // "quotes": ["error", "double"],
+    // "comma-dangle": 0, // warn about trailing commas
+    // "no-duplicate-case": 2, // disallow a duplicate case label.
+    // "no-irregular-whitespace": 2, // disallow irregular whitespace outside of strings and comments
+    // "object-curly-spacing": [2, "always"],
+    // // best practies
+    // "complexity": 0 // warn about cyclomatic complexity allowed in a program
+  }
+}

@@ -29,7 +29,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-deploy.command
 .prettierrc
 
 # /src/config/data.json

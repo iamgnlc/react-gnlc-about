@@ -9,6 +9,7 @@ const cloud = [
   { text: "mongoDB", value: 6 },
   { text: "React", value: 12 },
   { text: "Redux", value: 7 },
+  { text: "Algolia", value: 5 },
   { text: "Node.js", value: 7 },
   { text: "Sails.js", value: 7 },
   { text: "HTML", value: 9 },

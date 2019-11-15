@@ -1,12 +1,12 @@
-import React, { Component } from "react"
-import PropTypes from "prop-types"
-import handleViewport from "react-in-viewport"
+import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
+import handleViewport from "react-in-viewport";
 
-import { Row, Col, Table } from "reactstrap"
+import { Row, Col, Table } from "reactstrap";
 
-import Heading from "./Shared/Heading"
+import Heading from "./Shared/Heading";
 
-class _SpokenLanguages extends Component {
+class _SpokenLanguages extends PureComponent {
   render() {
     return (
       <Row
@@ -30,19 +30,19 @@ class _SpokenLanguages extends Component {
                 <th
                   className="text-center"
                   dangerouslySetInnerHTML={{
-                    __html: this.props.data.headRow[0],
+                    __html: this.props.data.headRow[0]
                   }}
                 />
                 <th
                   className="text-center"
                   dangerouslySetInnerHTML={{
-                    __html: this.props.data.headRow[1],
+                    __html: this.props.data.headRow[1]
                   }}
                 />
                 <th
                   className="text-center"
                   dangerouslySetInnerHTML={{
-                    __html: this.props.data.headRow[2],
+                    __html: this.props.data.headRow[2]
                   }}
                 />
               </tr>
@@ -52,25 +52,25 @@ class _SpokenLanguages extends Component {
                 <th
                   scope="row"
                   dangerouslySetInnerHTML={{
-                    __html: this.props.data.headCol[0],
+                    __html: this.props.data.headCol[0]
                   }}
                 />
                 <td
                   className="text-center"
                   dangerouslySetInnerHTML={{
-                    __html: this.props.data.table.itRead,
+                    __html: this.props.data.table.itRead
                   }}
                 />
                 <td
                   className="text-center"
                   dangerouslySetInnerHTML={{
-                    __html: this.props.data.table.enRead,
+                    __html: this.props.data.table.enRead
                   }}
                 />
                 <td
                   className="text-center"
                   dangerouslySetInnerHTML={{
-                    __html: this.props.data.table.tenRead,
+                    __html: this.props.data.table.tenRead
                   }}
                 />
               </tr>
@@ -78,25 +78,25 @@ class _SpokenLanguages extends Component {
                 <th
                   scope="row"
                   dangerouslySetInnerHTML={{
-                    __html: this.props.data.headCol[1],
+                    __html: this.props.data.headCol[1]
                   }}
                 />
                 <td
                   className="text-center"
                   dangerouslySetInnerHTML={{
-                    __html: this.props.data.table.itWrite,
+                    __html: this.props.data.table.itWrite
                   }}
                 />
                 <td
                   className="text-center"
                   dangerouslySetInnerHTML={{
-                    __html: this.props.data.table.enWrite,
+                    __html: this.props.data.table.enWrite
                   }}
                 />
                 <td
                   className="text-center"
                   dangerouslySetInnerHTML={{
-                    __html: this.props.data.table.tenWrite,
+                    __html: this.props.data.table.tenWrite
                   }}
                 />
               </tr>
@@ -104,25 +104,25 @@ class _SpokenLanguages extends Component {
                 <th
                   scope="row"
                   dangerouslySetInnerHTML={{
-                    __html: this.props.data.headCol[2],
+                    __html: this.props.data.headCol[2]
                   }}
                 />
                 <td
                   className="text-center"
                   dangerouslySetInnerHTML={{
-                    __html: this.props.data.table.itVerb,
+                    __html: this.props.data.table.itVerb
                   }}
                 />
                 <td
                   className="text-center"
                   dangerouslySetInnerHTML={{
-                    __html: this.props.data.table.enVerb,
+                    __html: this.props.data.table.enVerb
                   }}
                 />
                 <td
                   className="text-center"
                   dangerouslySetInnerHTML={{
-                    __html: this.props.data.table.tenVerb,
+                    __html: this.props.data.table.tenVerb
                   }}
                 />
               </tr>
@@ -130,15 +130,15 @@ class _SpokenLanguages extends Component {
           </Table>
         </Col>
       </Row>
-    )
+    );
   }
 }
 
 _SpokenLanguages.propTypes = {
   data: PropTypes.object.isRequired,
-  inViewport: PropTypes.bool,
-}
+  inViewport: PropTypes.bool
+};
 
-const SpokenLanguages = handleViewport(_SpokenLanguages)
+const SpokenLanguages = handleViewport(_SpokenLanguages);
 
-export default SpokenLanguages
+export default SpokenLanguages;

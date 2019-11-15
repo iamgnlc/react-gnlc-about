@@ -1,13 +1,13 @@
-import React, { Component } from "react"
-import PropTypes from "prop-types"
-import handleViewport from "react-in-viewport"
+import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
+import handleViewport from "react-in-viewport";
 
-import { Row, Col } from "reactstrap"
+import { Row, Col } from "reactstrap";
 
-import "./HiddenContent.css"
-import Heading from "./Shared/Heading"
+import "./HiddenContent.css";
+import Heading from "./Shared/Heading";
 
-class _HiddenContent extends Component {
+class _HiddenContent extends PureComponent {
   render() {
     return (
       <Row
@@ -41,15 +41,15 @@ class _HiddenContent extends Component {
           </p>
         </Col>
       </Row>
-    )
+    );
   }
 }
 
 _HiddenContent.propTypes = {
   label: PropTypes.string,
-  inViewport: PropTypes.bool,
-}
+  inViewport: PropTypes.bool
+};
 
-const HiddenContent = handleViewport(_HiddenContent)
+const HiddenContent = handleViewport(_HiddenContent);
 
-export default HiddenContent
+export default HiddenContent;

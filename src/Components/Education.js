@@ -1,12 +1,12 @@
-import React, { Component } from "react"
-import PropTypes from "prop-types"
-import handleViewport from "react-in-viewport"
+import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
+import handleViewport from "react-in-viewport";
 
-import { Row, Col } from "reactstrap"
+import { Row, Col } from "reactstrap";
 
-import Heading from "./Shared/Heading"
+import Heading from "./Shared/Heading";
 
-class _Education extends Component {
+class _Education extends PureComponent {
   render() {
     return (
       <Row
@@ -36,19 +36,19 @@ class _Education extends Component {
                   <p>{section.text}</p>
                 </Col>
               </Row>
-            )
+            );
           })}
         </Col>
       </Row>
-    )
+    );
   }
 }
 
 _Education.propTypes = {
   data: PropTypes.object.isRequired,
-  inViewport: PropTypes.bool,
-}
+  inViewport: PropTypes.bool
+};
 
-const Education = handleViewport(_Education)
+const Education = handleViewport(_Education);
 
-export default Education
+export default Education;

@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { PureComponent } from "react"
 import PropTypes from "prop-types"
 import handleViewport from "react-in-viewport"
 
@@ -6,7 +6,7 @@ import { Row, Col } from "reactstrap"
 
 import Heading from "./Shared/Heading"
 
-const List = React.memo(function List(props) {
+const List = React.memo((props) => {
   return (
     <ul className="list pl-0 pl-sm-4 mb-4">
       {props.data.map((paragraph, key) => {
@@ -22,7 +22,7 @@ const List = React.memo(function List(props) {
   )
 })
 
-class _KeyAttributes extends Component {
+class _KeyAttributes extends PureComponent {
   render() {
     return (
       <Row

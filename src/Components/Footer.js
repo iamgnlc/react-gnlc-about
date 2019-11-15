@@ -3,34 +3,43 @@ import React from "react"
 import { Navbar } from "reactstrap"
 
 import { IconContext } from "react-icons"
-import { FaHeart, FaCopyright, FaGithub, FaReact } from "react-icons/fa"
+import { FaRegHeart, FaCopyright, FaGithub, FaReact } from "react-icons/fa"
 import { TiPrinter } from "react-icons/ti"
 
 import "../config/global.js"
 
-const Footer = React.memo(function Footer() {
+const Footer = React.memo(() => {
   return (
     <Navbar
       className="footer d-flex justify-content-center justify-content-sm-between d-print-none"
       fixed="bottom"
     >
       <small className="mx-1 text-muted text-center text-md-left d-flex align-items-center animated fadeInUp">
-        <IconContext.Provider value={{ className: "mr-1" }}>
-          <FaCopyright />
-        </IconContext.Provider>
-        {new Date().getFullYear()} &mdash; Made with
-        <IconContext.Provider
-          value={{ className: "text-danger animated pulse infinite mx-1" }}
-        >
-          <FaHeart />
-        </IconContext.Provider>
-        and React
-        <IconContext.Provider
-          value={{ className: "text-primary spin rotate mx-1" }}
-        >
-          <FaReact />
-        </IconContext.Provider>
-        &mdash; by <b className="ml-1">{global.meta.author}</b>
+        <span>
+          <IconContext.Provider value={{ className: "mr-1" }}>
+            <FaCopyright id="copy-icon" />
+          </IconContext.Provider>
+          {new Date().getFullYear()}
+        </span>
+        <span>
+          &mdash; Made with
+          <IconContext.Provider
+            value={{ className: "text-danger animated pulse infinite mx-1" }}
+          >
+            <FaRegHeart id="heart-icon" />
+          </IconContext.Provider>
+        </span>
+        <span>
+          and React
+          <IconContext.Provider
+            value={{ className: "text-primary spin rotate mx-1" }}
+          >
+            <FaReact id="react-icon" />
+          </IconContext.Provider>
+        </span>
+        <span>
+          &mdash; by <b>{global.meta.author}</b>
+        </span>
       </small>
 
       <button
@@ -39,12 +48,12 @@ const Footer = React.memo(function Footer() {
           window.print()
         }}
       >
-        <TiPrinter />
+        <TiPrinter id="print-icon" />
       </button>
 
       <small className="mx-1 d-flex align-items-center animated fadeInUp">
         <IconContext.Provider value={{ className: "mr-1" }}>
-          <FaGithub />
+          <FaGithub id="github-icon" />
         </IconContext.Provider>
         <a href={global.githubRepo} target="_blank" rel="noopener noreferrer">
           {global.githubRepo}

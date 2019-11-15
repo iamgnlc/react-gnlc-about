@@ -7,7 +7,7 @@ global.meta = {
 
 global.brand = "gnlc@localhost ~ $"
 
-global.githubRepo = "https://github.com/iamgnlc/cv"
+global.githubRepo = "https://github.com/iamgnlc/"
 
 global.printHeader =
   '<h1 class="mb-3 text-right">Curriculum Vitae of Gianluca Agnocchetti</h1><h4 class="mb-5 text-right">Senior full stack web developer</h4>'

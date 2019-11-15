@@ -8,7 +8,7 @@ import { TiPrinter } from "react-icons/ti"
 
 import "../config/global.js"
 
-const Footer = React.memo(function Footer() {
+const Footer = React.memo(() => {
   return (
     <Navbar
       className="footer d-flex justify-content-center justify-content-sm-between d-print-none"

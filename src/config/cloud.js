@@ -31,6 +31,7 @@ const cloud = [
   { text: "Git", value: 10 },
   { text: "SFTP", value: 2 },
   { text: "FTP", value: 2 },
+  { text: "Bower", value: 2.5 },
   { text: "Gulp", value: 2.5 },
   { text: "Webpack", value: 2.5 },
   { text: "Yarn", value: 2.5 },

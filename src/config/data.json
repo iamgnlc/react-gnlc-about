@@ -13,7 +13,7 @@
     },
     "phoneNumber": ["+44 7426 713188"],
     "email": ["gianluca.agnocchetti@gmail.com"],
-    "web": ["https://about.gnlc.me"],
+    "web": ["https://about.gnlc.me", "https://cmyk.gnlc.me"],
     "social": [
       "https://www.facebook.com/ggnnllcc",
       "https://linkedin.com/in/iamgnlc",
@@ -38,7 +38,7 @@
           "Very good knowledge of templating system like <b>Pug/Jade</b> and <b>HAML</b>.",
           "Good knowledge of <b>XML</b> meta language, using in conjunction with <b>Xpath</b> technology for querying big files, validation against <b>XSD</b> schema and <b>XSL</b> template system.",
           "Design and development of adaptive and responsive table-less front end pixel precision layouts and clear and dynamic user interfaces, for the best possible user experience, using <b>960.gs</b>, <b>Twitter Bootstrap</b>, <b>Skeleton</b>, <b>ZURB Foundation</b>, <b>Pure</b> and many other frameworks.",
-          "Extensive knowledge of <b>React.js</b>, <b>Redux.js</b>, <b>Node.js</b> and MVC framework <b>Sails.js</b>.",
+          "Extensive knowledge of <b>React.js</b>, <b>Redux.js</b>, <b>Node.js</b> and <b>Sails.js</b> MVC framework.",
           "Exposure to <b>React Native</b> mobile development.",
           "Good knowledge of <b>Algolia</b> search engine, indexing and fetching processes.",
           "Good knowledge of <b>Foundation for Email</b> framework, for responsive and maximum compatibility email creation.",

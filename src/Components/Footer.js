@@ -21,8 +21,9 @@ const Footer = React.memo(() => {
           </IconContext.Provider>
           {new Date().getFullYear()}
         </span>
+        <span>&nbsp;&mdash;&nbsp;</span>
         <span>
-          &mdash; Made with
+          Made with
           <IconContext.Provider
             value={{ className: "text-danger animated pulse infinite mx-1" }}
           >
@@ -32,13 +33,14 @@ const Footer = React.memo(() => {
         <span>
           and React
           <IconContext.Provider
-            value={{ className: "text-primary spin rotate mx-1" }}
+            value={{ className: "text-primary spin rotate ml-1" }}
           >
             <FaReact id="react-icon" />
           </IconContext.Provider>
         </span>
+        <span>&nbsp;&mdash;&nbsp;</span>
         <span>
-          &mdash; by <b>{global.meta.author}</b>
+          by <b>{global.meta.author}</b>
         </span>
       </small>
 

@@ -8,6 +8,15 @@
   color: $terminal-background;
   text-shadow: none;
 }
+.header,
+.footer {
+  ::selection {
+    background: rgba($terminal-link-color, 0.75);
+  }
+  ::-moz-selection {
+    background: rgba($terminal-link-color, 0.75);
+  }
+}
 body {
   font-family: "Inconsolata", monospace, Arial, Helvetica, sans-serif;
   background-color: $terminal-background;

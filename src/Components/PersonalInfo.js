@@ -1,12 +1,12 @@
-import React, { Component } from "react"
-import PropTypes from "prop-types"
-import handleViewport from "react-in-viewport"
+import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
+import handleViewport from "react-in-viewport";
 
-import { Row, Col } from "reactstrap"
+import { Row, Col } from "reactstrap";
 
-import Heading from "./Shared/Heading"
+import Heading from "./Shared/Heading";
 
-class _PersonalInfo extends Component {
+class _PersonalInfo extends PureComponent {
   render() {
     return (
       <Row
@@ -63,15 +63,15 @@ class _PersonalInfo extends Component {
           <p dangerouslySetInnerHTML={{ __html: this.props.data.nino }} />
         </Col> */}
       </Row>
-    )
+    );
   }
 }
 
 _PersonalInfo.propTypes = {
   data: PropTypes.object.isRequired,
-  inViewport: PropTypes.bool,
-}
+  inViewport: PropTypes.bool
+};
 
-const PersonalInfo = handleViewport(_PersonalInfo)
+const PersonalInfo = handleViewport(_PersonalInfo);
 
-export default PersonalInfo
+export default PersonalInfo;

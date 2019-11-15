@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import { Helmet } from "react-helmet";
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 import ScrollableAnchor, { configureAnchors } from "react-scrollable-anchor";
@@ -24,7 +24,7 @@ import KeyAttributes from "./Components/KeyAttributes.js";
 import SpokenLanguages from "./Components/SpokenLanguages.js";
 import Education from "./Components/Education.js";
 
-class App extends Component {
+class App extends PureComponent {
   constructor(props) {
     super(props);
 

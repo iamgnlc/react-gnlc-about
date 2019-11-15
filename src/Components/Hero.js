@@ -1,12 +1,12 @@
-import React, { Component } from "react"
-import PropTypes from "prop-types"
-import handleViewport from "react-in-viewport"
+import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
+import handleViewport from "react-in-viewport";
 
-import { Row, Col } from "reactstrap"
+import { Row, Col } from "reactstrap";
 
-import WordCloud from "./WordCloud.js"
+import WordCloud from "./WordCloud.js";
 
-class _Hero extends Component {
+class _Hero extends PureComponent {
   render() {
     return (
       <Row
@@ -23,14 +23,14 @@ class _Hero extends Component {
           <WordCloud />
         </Col>
       </Row>
-    )
+    );
   }
 }
 
 _Hero.propTypes = {
-  inViewport: PropTypes.bool,
-}
+  inViewport: PropTypes.bool
+};
 
-const Hero = handleViewport(_Hero)
+const Hero = handleViewport(_Hero);
 
-export default Hero
+export default Hero;

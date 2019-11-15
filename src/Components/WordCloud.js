@@ -1,24 +1,24 @@
-import React, { Component } from "react"
-import TagCloud from "react-tag-cloud"
+import React, { PureComponent } from "react";
+import TagCloud from "react-tag-cloud";
 
-import cloud from "../config/cloud.js"
+import cloud from "../config/cloud.js";
 
 const cloudStyle = {
   fontFamily: "Inconsolata",
   width: "100%",
-  height: "calc(100vh - 100px)",
-}
+  height: "calc(100vh - 100px)"
+};
 
-class WordCloud extends Component {
+class WordCloud extends PureComponent {
   shuffle = () => {
-    this.forceUpdate()
-  }
+    this.forceUpdate();
+  };
 
   autoShuffle = () => {
     setInterval(() => {
-      this.shuffle()
-    }, process.env.REACT_APP_AUTO_SHUFFLE_TIMEOUT)
-  }
+      this.shuffle();
+    }, process.env.REACT_APP_AUTO_SHUFFLE_TIMEOUT);
+  };
 
   componentDidMount() {
     // this.autoShuffle()
@@ -29,8 +29,8 @@ class WordCloud extends Component {
       <span key={text} className="tag" style={style}>
         {text}
       </span>
-    )
-  }
+    );
+  };
 
   renderDesktop = () => {
     return (
@@ -44,13 +44,13 @@ class WordCloud extends Component {
             fontSize: word.value * 6,
             opacity: word.value / 10,
             padding: word.value * 1.5,
-            zIndex: -index,
-          }
-          return this.renderWord(word.text, tagStyle)
+            zIndex: -index
+          };
+          return this.renderWord(word.text, tagStyle);
         })}
       </TagCloud>
-    )
-  }
+    );
+  };
 
   renderMobile = () => {
     return (
@@ -64,13 +64,13 @@ class WordCloud extends Component {
             fontSize: word.value * 3,
             opacity: word.value / 10,
             padding: word.value * 0.75,
-            zIndex: -index,
-          }
-          return this.renderWord(word.text, tagStyle)
+            zIndex: -index
+          };
+          return this.renderWord(word.text, tagStyle);
         })}
       </TagCloud>
-    )
-  }
+    );
+  };
 
   render() {
     return (
@@ -78,8 +78,8 @@ class WordCloud extends Component {
         {this.renderDesktop()}
         {this.renderMobile()}
       </React.Fragment>
-    )
+    );
   }
 }
 
-export default WordCloud
+export default WordCloud;

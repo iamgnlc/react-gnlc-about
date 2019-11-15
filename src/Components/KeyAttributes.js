@@ -1,10 +1,10 @@
-import React, { Component } from "react"
-import PropTypes from "prop-types"
-import handleViewport from "react-in-viewport"
+import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
+import handleViewport from "react-in-viewport";
 
-import { Row, Col } from "reactstrap"
+import { Row, Col } from "reactstrap";
 
-import Heading from "./Shared/Heading"
+import Heading from "./Shared/Heading";
 
 const List = React.memo(function List(props) {
   return (
@@ -16,13 +16,13 @@ const List = React.memo(function List(props) {
             className="item text-justify mb-3"
             dangerouslySetInnerHTML={{ __html: paragraph }}
           />
-        )
+        );
       })}
     </ul>
-  )
-})
+  );
+});
 
-class _KeyAttributes extends Component {
+class _KeyAttributes extends PureComponent {
   render() {
     return (
       <Row
@@ -52,22 +52,22 @@ class _KeyAttributes extends Component {
                   <List data={section.list} />
                 </Col>
               </Row>
-            )
+            );
           })}
         </Col>
       </Row>
-    )
+    );
   }
 }
 
 List.propTypes = {
-  data: PropTypes.array,
-}
+  data: PropTypes.array
+};
 _KeyAttributes.propTypes = {
   data: PropTypes.object.isRequired,
-  inViewport: PropTypes.bool,
-}
+  inViewport: PropTypes.bool
+};
 
-const KeyAttributes = handleViewport(_KeyAttributes)
+const KeyAttributes = handleViewport(_KeyAttributes);
 
-export default KeyAttributes
+export default KeyAttributes;

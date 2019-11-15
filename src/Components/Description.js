@@ -1,12 +1,12 @@
-import React, { Component } from "react"
-import PropTypes from "prop-types"
-import handleViewport from "react-in-viewport"
+import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
+import handleViewport from "react-in-viewport";
 
-import { Row, Col } from "reactstrap"
+import { Row, Col } from "reactstrap";
 
-import Heading from "./Shared/Heading"
+import Heading from "./Shared/Heading";
 
-class _Description extends Component {
+class _Description extends PureComponent {
   render() {
     return (
       <Row
@@ -29,15 +29,15 @@ class _Description extends Component {
           />
         </Col>
       </Row>
-    )
+    );
   }
 }
 
 _Description.propTypes = {
   data: PropTypes.object.isRequired,
-  inViewport: PropTypes.bool,
-}
+  inViewport: PropTypes.bool
+};
 
-const Description = handleViewport(_Description)
+const Description = handleViewport(_Description);
 
-export default Description
+export default Description;

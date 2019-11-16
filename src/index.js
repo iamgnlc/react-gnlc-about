@@ -1,6 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import App from "./App"
+import Routes from "./Routes"
 import registerServiceWorker from "./registerServiceWorker"
 
 import * as Sentry from "@sentry/browser"
@@ -17,12 +17,15 @@ if (process.env.REACT_APP_HOTJAR_ID && process.env.REACT_APP_HOTJAR_SV)
     process.env.REACT_APP_HOTJAR_SV,
   )
 
-// ReactDOM.render(<App />, document.getElementById("root"))
-const rootElement = document.getElementById("root")
+ReactDOM.render(<Routes />, document.getElementById("root"))
+registerServiceWorker()
 
-if (rootElement.hasChildNodes()) {
-  ReactDOM.hydrate(<App />, rootElement)
-  registerServiceWorker()
-} else {
-  ReactDOM.render(<App />, rootElement)
-}
+// React Snap.
+// const rootElement = document.getElementById("root")
+
+// if (rootElement.hasChildNodes()) {
+//   ReactDOM.hydrate(<Routes />, rootElement)
+//   registerServiceWorker()
+// } else {
+//   ReactDOM.render(<Routes />, rootElement)
+// }

@@ -1,69 +1,65 @@
-import React, { PureComponent } from "react";
-import { Helmet } from "react-helmet";
-import { ParallaxProvider, Parallax } from "react-scroll-parallax";
-import ScrollableAnchor, { configureAnchors } from "react-scrollable-anchor";
+import React, { PureComponent } from "react"
+import { Helmet } from "react-helmet"
+import { ParallaxProvider, Parallax } from "react-scroll-parallax"
+import ScrollableAnchor, { configureAnchors } from "react-scrollable-anchor"
 
-import { Container } from "reactstrap";
+import { Container } from "reactstrap"
 
-import jsonData from "./config/data.json";
-import "./config/global.js";
+import jsonData from "./config/data.json"
+import "./config/global.js"
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import "animate.css/animate.min.css";
-import "./App.scss";
+import "bootstrap/dist/css/bootstrap.min.css"
+import "animate.css/animate.min.css"
+import "./App.scss"
 
-import PrintContent from "./Components/PrintContent.js";
-import Hero from "./Components/Hero.js";
-import HiddenContent from "./Components/HiddenContent.js";
-import Header from "./Components/Header.js";
-import Footer from "./Components/Footer.js";
-import ContactDetails from "./Components/ContactDetails.js";
-import Description from "./Components/Description.js";
-import PersonalInfo from "./Components/PersonalInfo.js";
-import KeyAttributes from "./Components/KeyAttributes.js";
-import SpokenLanguages from "./Components/SpokenLanguages.js";
-import Education from "./Components/Education.js";
+import PrintContent from "./Components/PrintContent.js"
+import Hero from "./Components/Hero.js"
+import HiddenContent from "./Components/HiddenContent.js"
+import Header from "./Components/Header.js"
+import Footer from "./Components/Footer.js"
+import ContactDetails from "./Components/ContactDetails.js"
+import Description from "./Components/Description.js"
+import PersonalInfo from "./Components/PersonalInfo.js"
+import KeyAttributes from "./Components/KeyAttributes.js"
+import SpokenLanguages from "./Components/SpokenLanguages.js"
+import Education from "./Components/Education.js"
 
 class App extends PureComponent {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       data: jsonData,
-      menu: this.buildMenu(jsonData),
-      queryParams: this.setQueryParams()
-    };
+      menu: null,
+      contacts: false,
+    }
   }
 
-  setQueryParams = () => {
-    let queryParams = {};
-    if (!window.location.search) return queryParams;
-    let values = new URLSearchParams(window.location.search);
-    for (let param of values.entries()) {
-      queryParams[param[0]] = param[1];
-    }
-    return queryParams;
-  };
-
-  buildMenu = jsondata => {
-    let menu = [];
-    Object.keys(jsondata).map(section => {
-      menu.push({ ref: jsondata[section].id, name: jsondata[section].id });
-      return true;
-    });
-    return menu;
-  };
+  buildMenu = (jsondata) => {
+    let menu = []
+    Object.keys(jsondata).map((section) => {
+      menu.push({ ref: jsondata[section].id, name: jsondata[section].id })
+      return true
+    })
+    return menu
+  }
 
   componentDidMount() {
     // Disable console.log in production.
-    if (process.env.NODE_ENV === "production") console.log = function() {};
+    if (process.env.NODE_ENV === "production") console.log = function() {}
     // Show environment.
-    console.log(process.env.NODE_ENV);
+    console.log(process.env.NODE_ENV)
     // Configure scroll to anchor.
+
+    this.setState({
+      contacts: this.props.contacts,
+      menu: this.buildMenu(jsonData),
+    })
+
     configureAnchors({
       offset: -process.env.REACT_APP_ANCHOR_OFFSET,
-      scrollDuration: process.env.REACT_APP_ANCHOR_SCROLL_DURATION
-    });
+      scrollDuration: process.env.REACT_APP_ANCHOR_SCROLL_DURATION,
+    })
   }
 
   render() {
@@ -95,7 +91,7 @@ class App extends PureComponent {
             <PrintContent content={global.printHeader} />
 
             <ScrollableAnchor id={this.state.data.contactDetails.id}>
-              {"showAll" in this.state.queryParams ? (
+              {this.props.contacts ? (
                 <ContactDetails data={this.state.data.contactDetails} />
               ) : (
                 <HiddenContent label={this.state.data.contactDetails.title} />
@@ -142,8 +138,8 @@ class App extends PureComponent {
 
         <Footer />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

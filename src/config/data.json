@@ -30,6 +30,97 @@
     "title": "Profile",
     "description": "Senior full stack developer with over 15 years track record of delivering complex, high value, scalable web sites/applications, custom data tracking and analysis solutions, and quick problem solving. Passionate about coding and always up to date about latest technology, focused on performance and security, to implement the optimal solution. Generous in sharing technical knowledge with the team, and always opened to a different point of view. Keen to spend time learning and improving my skill at 360 round."
   },
+  "employmentHistory": {
+    "id": "employment-history",
+    "title": "Employment History",
+    "paragraphs": [
+      {
+        "period": "Jan 2018 – Ongoing",
+        "role": "Web Developer",
+        "company": "Vanarama Ltd., Hemel Hempstead – UK",
+        "list": [
+          "Helping the company through the digital transformation process, developing a range of new software using cutting edge technologies.",
+          "Full stack development with Ruby On Rails, React.js / Native, Redux, Node.js, REST/GraphQL, Algolia integration.",
+          "Heroku / AWS management.",
+          "Mentoring junior developers."
+        ]
+      },
+      {
+        "period": "Sep 2017 – Dec 2017",
+        "role": "Contract Web Developer / Drupal Specialist",
+        "company": "ECMWF, Reading – UK",
+        "list": [
+          "Consistent UI design across multiple apps and environment.",
+          "Complete Drupal front end redesign with mobile first principals, implementing new back end functionalities and tweaking existing ones.",
+          "Custom Drupal module development."
+        ]
+      },
+      {
+        "period": "Oct 2016 – Sep 2017",
+        "role": "Web Developer",
+        "company": "AFL (Fleet Management) Ltd., Slough – UK",
+        "list": [
+          "Web site development, using major CMS like Drupal 7 and Wordpress. Responsive frontend using Bootstrap framework, server side development for bespoke functionalities, third party APIs integration, SEO optimisation.",
+          "Working autonomously or in team, full stack development for company intranet management web applications, using Laravel and/or custom company framework.",
+          "Car categories application development using Laravel framework. Normalising data from external DB into hierarchical tag system.",
+          "Windows/Linux web server administration, IT support, network management, company report boards management based on Raspberry Pi hardware.",
+          "Responsive newsletter development using Foundation framework."
+        ]
+      },
+      {
+        "period": "Apr 2015 – Oct 2016",
+        "role": "Web Developer",
+        "company": "Binamic Ltd. (subsidiary of AFL Ltd.), Slough – UK",
+        "list": [
+          "Web site development, using major CMS like Drupal 7 or Wordpress. Responsive frontend using Bootstrap framework, server side development for bespoke functionalities, third party APIs integration, SEO optimisation.",
+          "Fleet management web application development using company custom framework."
+        ]
+      },
+      {
+        "period": "Feb 2013 – Feb 2015",
+        "role": "Lead Web Developer",
+        "company": "Finder Media & Tech Ltd., Welwyn Garden City – UK",
+        "list": [
+          "Company web site development based on Drupal 7 CMS. Responsive frontend, custom module development with third party APIs integration (Lyris, Adestra, AWS).",
+          "Linux web server administration, automated PHP scripts for scheduled backups on AWS.",
+          "Reports development in Jasper Reports, and with bespoke Laravel/AWS SQS/mongoDB web application."
+        ]
+      },
+      {
+        "period": "Apr 2012 – Jan 2013",
+        "role": "Lead Web Developer",
+        "company": "Automated Marketing Ltd., Ware – UK",
+        "list": [
+          "Bespoke web site development using Wordpress. Integration with Infusionsoft APIs.",
+          "Team and tech lead for a team of 3 developers."
+        ]
+      },
+      {
+        "period": "Apr 2008 – Feb 2011",
+        "role": "Lead Web Developer",
+        "company": "Micromaint Srl., Naples – Italy",
+        "list": [
+          "Bespoke web applications development in classic ASP and PHP.",
+          "SQL Server DBA, Windows web server administration, IT support."
+        ]
+      },
+      {
+        "period": "Jan 2007 – Mar 2007",
+        "role": "Contract Web Designer",
+        "company": "PC Consulting sas., Naples – Italy",
+        "list": ["Bespoke web site development in PHP."]
+      },
+      {
+        "period": "Jun 2001 – Jun 2005",
+        "role": "Contract Web Designer",
+        "company": "Napoliweb Srl., Naples – Italy",
+        "list": [
+          "Bespoke web site development in ASP and PHP.",
+          "SEO optimisation."
+        ]
+      }
+    ]
+  },
   "keyAttributes": {
     "id": "key-attributes",
     "title": "Key attributes and skills",
@@ -149,97 +240,6 @@
         "list": [
           "Over 10 years experience in office environments gave me the chance to gain skills in business communication methods and job optimization.",
           "I played as DJ in bar, disco, holiday villages and amusement parks, in contact with people from all around the world; this gave me the opportunity to confront myself with other kind of cultures."
-        ]
-      }
-    ]
-  },
-  "employment": {
-    "id": "employment",
-    "title": "Employment History",
-    "paragraphs": [
-      {
-        "period": "Jan 2018 – Ongoing",
-        "role": "Web Developer",
-        "company": "Vanarama Ltd., Hemel Hempstead – UK",
-        "list": [
-          "Helping the company through the digital transformation process, developing a range of new software using cutting edge technologies.",
-          "Full stack development with Ruby On Rails, React.js / Native, Redux, Node.js, REST/GraphQL, Algolia integration.",
-          "Heroku / AWS management.",
-          "Mentoring junior developers."
-        ]
-      },
-      {
-        "period": "Sep 2017 – Dec 2017",
-        "role": "Contract Web Developer / Drupal Specialist",
-        "company": "ECMWF, Reading – UK",
-        "list": [
-          "Consistent UI design across multiple apps and environment.",
-          "Complete Drupal front end redesign with mobile first principals, implementing new back end functionalities and tweaking existing ones.",
-          "Custom Drupal module development."
-        ]
-      },
-      {
-        "period": "Oct 2016 – Sep 2017",
-        "role": "Web Developer",
-        "company": "AFL (Fleet Management) Ltd., Slough – UK",
-        "list": [
-          "Web site development, using major CMS like Drupal 7 and Wordpress. Responsive frontend using Bootstrap framework, server side development for bespoke functionalities, third party APIs integration, SEO optimisation.",
-          "Working autonomously or in team, full stack development for company intranet management web applications, using Laravel and/or custom company framework.",
-          "Car categories application development using Laravel framework. Normalising data from external DB into hierarchical tag system.",
-          "Windows/Linux web server administration, IT support, network management, company report boards management based on Raspberry Pi hardware.",
-          "Responsive newsletter development using Foundation framework."
-        ]
-      },
-      {
-        "period": "Apr 2015 – Oct 2016",
-        "role": "Web Developer",
-        "company": "Binamic Ltd. (subsidiary of AFL Ltd.), Slough – UK",
-        "list": [
-          "Web site development, using major CMS like Drupal 7 or Wordpress. Responsive frontend using Bootstrap framework, server side development for bespoke functionalities, third party APIs integration, SEO optimisation.",
-          "Fleet management web application development using company custom framework."
-        ]
-      },
-      {
-        "period": "Feb 2013 – Feb 2015",
-        "role": "Lead Web Developer",
-        "company": "Finder Media & Tech Ltd., Welwyn Garden City – UK",
-        "list": [
-          "Company web site development based on Drupal 7 CMS. Responsive frontend, custom module development with third party APIs integration (Lyris, Adestra, AWS).",
-          "Linux web server administration, automated PHP scripts for scheduled backups on AWS.",
-          "Reports development in Jasper Reports, and with bespoke Laravel/AWS SQS/mongoDB web application."
-        ]
-      },
-      {
-        "period": "Apr 2012 – Jan 2013",
-        "role": "Lead Web Developer",
-        "company": "Automated Marketing Ltd., Ware – UK",
-        "list": [
-          "Bespoke web site development using Wordpress. Integration with Infusionsoft APIs.",
-          "Team and tech lead for a team of 3 developers."
-        ]
-      },
-      {
-        "period": "Apr 2008 – Feb 2011",
-        "role": "Lead Web Developer",
-        "company": "Micromaint Srl., Naples – Italy",
-        "list": [
-          "Bespoke web applications development in classic ASP and PHP.",
-          "SQL Server DBA, Windows web server administration, IT support."
-        ]
-      },
-      {
-        "period": "Jan 2007 – Mar 2007",
-        "role": "Contract Web Designer",
-        "company": "PC Consulting sas., Naples – Italy",
-        "list": ["Bespoke web site development in PHP."]
-      },
-      {
-        "period": "Jun 2001 – Jun 2005",
-        "role": "Contract Web Designer",
-        "company": "Napoliweb Srl., Naples – Italy",
-        "list": [
-          "Bespoke web site development in ASP and PHP.",
-          "SEO optimisation."
         ]
       }
     ]

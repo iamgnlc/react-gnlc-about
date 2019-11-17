@@ -107,8 +107,8 @@ class App extends PureComponent {
 
             <hr />
 
-            <ScrollableAnchor id={this.state.data.employment.id}>
-              <EmploymentHistory data={this.state.data.employment} />
+            <ScrollableAnchor id={this.state.data.employmentHistory.id}>
+              <EmploymentHistory data={this.state.data.employmentHistory} />
             </ScrollableAnchor>
 
             <hr />

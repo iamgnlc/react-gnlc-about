@@ -6,23 +6,24 @@ import ScrollableAnchor, { configureAnchors } from "react-scrollable-anchor"
 import { Container } from "reactstrap"
 
 import jsonData from "./config/data.json"
-import "./config/global.js"
+import "./config/global"
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import "animate.css/animate.min.css"
 import "./App.scss"
 
-import PrintContent from "./Components/PrintContent.js"
-import Hero from "./Components/Hero.js"
-import HiddenContent from "./Components/HiddenContent.js"
-import Header from "./Components/Header.js"
-import Footer from "./Components/Footer.js"
-import ContactDetails from "./Components/ContactDetails.js"
-import Description from "./Components/Description.js"
-import PersonalInfo from "./Components/PersonalInfo.js"
-import KeyAttributes from "./Components/KeyAttributes.js"
-import SpokenLanguages from "./Components/SpokenLanguages.js"
-import Education from "./Components/Education.js"
+import PrintContent from "./Components/PrintContent"
+import Hero from "./Components/Hero"
+import HiddenContent from "./Components/HiddenContent"
+import Header from "./Components/Header"
+import Footer from "./Components/Footer"
+import ContactDetails from "./Components/ContactDetails"
+import Description from "./Components/Description"
+import PersonalInfo from "./Components/PersonalInfo"
+import KeyAttributes from "./Components/KeyAttributes"
+import SpokenLanguages from "./Components/SpokenLanguages"
+import Education from "./Components/Education"
+import EmploymentHistory from "./Components/EmploymentHistory"
 
 class App extends PureComponent {
   constructor(props) {
@@ -102,6 +103,12 @@ class App extends PureComponent {
 
             <ScrollableAnchor id={this.state.data.profile.id}>
               <Description data={this.state.data.profile} />
+            </ScrollableAnchor>
+
+            <hr />
+
+            <ScrollableAnchor id={this.state.data.employment.id}>
+              <EmploymentHistory data={this.state.data.employment} />
             </ScrollableAnchor>
 
             <hr />

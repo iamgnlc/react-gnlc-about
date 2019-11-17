@@ -7,12 +7,8 @@ const Routes = React.memo(() => {
   return (
     <Router>
       <Switch>
-        <Route path="/showAll/">
-          <App contacts={true} />
-        </Route>
-        <Route path="/">
-          <App />
-        </Route>
+        <Route path="/showAll" render={() => <App contacts={true} />} />
+        <Route path="/" component={App} />
       </Switch>
     </Router>
   )

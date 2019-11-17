@@ -122,6 +122,12 @@ strong,
   text-shadow: 1px 1px 0px #000;
   overflow-wrap: break-word;
 }
+.sub-title {
+  color: $terminal-title-color;
+  text-shadow: 1px 1px 0px #000;
+  overflow-wrap: break-word;
+  opacity: 0.5;
+}
 .title-wrapper {
   background-color: $terminal-background;
   position: sticky;

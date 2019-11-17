@@ -25,7 +25,7 @@ registerServiceWorker()
 
 // if (rootElement.hasChildNodes()) {
 //   ReactDOM.hydrate(<Routes />, rootElement)
-//   registerServiceWorker()
+//   // registerServiceWorker()
 // } else {
 //   ReactDOM.render(<Routes />, rootElement)
 // }

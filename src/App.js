@@ -50,13 +50,13 @@ class App extends PureComponent {
     if (process.env.NODE_ENV === "production") console.log = function() {}
     // Show environment.
     console.log(process.env.NODE_ENV)
-    // Configure scroll to anchor.
 
     this.setState({
       contacts: this.props.contacts,
       menu: this.buildMenu(jsonData),
     })
 
+    // Configure scroll to anchor.
     configureAnchors({
       offset: -process.env.REACT_APP_ANCHOR_OFFSET,
       scrollDuration: process.env.REACT_APP_ANCHOR_SCROLL_DURATION,

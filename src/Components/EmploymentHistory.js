@@ -7,7 +7,7 @@ import { Row, Col } from "reactstrap"
 import Heading from "./Shared/Heading"
 import List from "./Shared/List"
 
-class _KeyAttributes extends PureComponent {
+class _EmploymentHistory extends PureComponent {
   render() {
     return (
       <Row
@@ -26,14 +26,26 @@ class _KeyAttributes extends PureComponent {
         <Col xs={12}>
           {this.props.data.paragraphs.map((section, key) => {
             return (
-              <Row key={key}>
-                <Col xs={12} sm={3} className="title-wrapper">
+              <Row key={key} className="mb-4">
+                <Col
+                  xs={12}
+                  md={3}
+                  className="title-wrapper text-center text-md-right"
+                >
                   <h5
-                    className="title text-center text-sm-right"
-                    dangerouslySetInnerHTML={{ __html: section.title }}
+                    className="title text-center text-md-right"
+                    dangerouslySetInnerHTML={{ __html: section.role }}
+                  />
+                  <h6
+                    className="sub-title text-center text-md-right d-inline-block d-md-block mx-2 mx-md-0"
+                    dangerouslySetInnerHTML={{ __html: section.period }}
+                  />
+                  <h6
+                    className="sub-title text-center text-md-right d-inline-block d-md-block mx-2 mx-md-0"
+                    dangerouslySetInnerHTML={{ __html: section.company }}
                   />
                 </Col>
-                <Col xs={12} sm={9}>
+                <Col xs={12} md={9}>
                   <List data={section.list} />
                 </Col>
               </Row>
@@ -45,11 +57,11 @@ class _KeyAttributes extends PureComponent {
   }
 }
 
-_KeyAttributes.propTypes = {
+_EmploymentHistory.propTypes = {
   data: PropTypes.object.isRequired,
   inViewport: PropTypes.bool,
 }
 
-const KeyAttributes = handleViewport(_KeyAttributes)
+const EmploymentHistory = handleViewport(_EmploymentHistory)
 
-export default KeyAttributes
+export default EmploymentHistory

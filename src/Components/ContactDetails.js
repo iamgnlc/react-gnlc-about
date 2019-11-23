@@ -1,11 +1,11 @@
-import React, { PureComponent } from "react";
-import PropTypes from "prop-types";
-import handleViewport from "react-in-viewport";
-import Mailto from "react-protected-mailto";
+import React, { PureComponent } from "react"
+import PropTypes from "prop-types"
+import handleViewport from "react-in-viewport"
+import Mailto from "react-protected-mailto"
 
-import Heading from "./Shared/Heading";
+import Heading from "./Shared/Heading"
 
-import { Row, Col } from "reactstrap";
+import { Row, Col } from "reactstrap"
 
 class _ContactDetails extends PureComponent {
   render() {
@@ -52,7 +52,7 @@ class _ContactDetails extends PureComponent {
             <Col xs={12} md={8}>
               <p>
                 {this.props.data.phoneNumber.map((phoneNumber, key) => {
-                  return <Mailto key={key} tel={phoneNumber} />;
+                  return <Mailto key={key} tel={phoneNumber} />
                 })}
               </p>
             </Col>
@@ -66,7 +66,7 @@ class _ContactDetails extends PureComponent {
             <Col xs={12} md={8}>
               <p>
                 {this.props.data.email.map((email, key) => {
-                  return <Mailto key={key} email={email} />;
+                  return <Mailto key={key} email={email} />
                 })}
               </p>
             </Col>
@@ -86,7 +86,7 @@ class _ContactDetails extends PureComponent {
                     >
                       {url}
                     </a>
-                  );
+                  )
                 })}
               </p>
             </Col>
@@ -106,22 +106,22 @@ class _ContactDetails extends PureComponent {
                     >
                       {url}
                     </a>
-                  );
+                  )
                 })}
               </p>
             </Col>
           </Row>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
 _ContactDetails.propTypes = {
   data: PropTypes.object.isRequired,
-  inViewport: PropTypes.bool
-};
+  inViewport: PropTypes.bool,
+}
 
-const ContactDetails = handleViewport(_ContactDetails);
+const ContactDetails = handleViewport(_ContactDetails)
 
-export default ContactDetails;
+export default ContactDetails

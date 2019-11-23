@@ -8,6 +8,20 @@
   color: $terminal-background;
   text-shadow: none;
 }
+html,
+body,
+#root {
+  height: 100%;
+}
+.header,
+.footer {
+  ::selection {
+    background: rgba($terminal-link-color, 0.75);
+  }
+  ::-moz-selection {
+    background: rgba($terminal-link-color, 0.75);
+  }
+}
 body {
   font-family: "Inconsolata", monospace, Arial, Helvetica, sans-serif;
   background-color: $terminal-background;
@@ -112,6 +126,13 @@ strong,
   color: $terminal-title-color;
   text-shadow: 1px 1px 0px #000;
   overflow-wrap: break-word;
+}
+.sub-title {
+  color: $terminal-title-color;
+  font-size: 90%;
+  text-shadow: 1px 1px 0px #000;
+  overflow-wrap: break-word;
+  opacity: 0.65;
 }
 .title-wrapper {
   background-color: $terminal-background;

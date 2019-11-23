@@ -1,78 +1,82 @@
-import React, { PureComponent } from "react";
-import PropTypes from "prop-types";
-import classNames from "classnames";
-import { goToAnchor } from "react-scrollable-anchor";
+import React, { PureComponent } from "react"
+import PropTypes from "prop-types"
+import classNames from "classnames"
+import { goToAnchor } from "react-scrollable-anchor"
 
-import { Nav, NavItem, NavLink } from "reactstrap";
+import { Nav, NavItem, NavLink } from "reactstrap"
 
-import "../config/global.js";
+import "../config/global.js"
 
 class Menu extends PureComponent {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
-      anchor: false
-    };
+      anchor: false,
+    }
   }
 
-  setAnchor = anchor => {
+  setAnchor = (anchor) => {
     this.setState({
-      anchor: anchor
-    });
-  };
+      anchor: anchor,
+    })
+  }
 
-  getInitials = str => {
-    let matches = str.match(/\b(\w)/g);
-    return matches.join("");
-  };
+  getInitials = (str) => {
+    let matches = str.match(/\b(\w)/g)
+    return matches.join("")
+  }
 
   componentDidMount() {
     window.addEventListener("hashchange", () => {
-      this.setAnchor(window.location.hash);
-    });
+      this.setAnchor(window.location.hash)
+    })
   }
 
   render() {
+    let { menu } = this.props
     return (
       <Nav className="ml-auto animated fadeInRight nav-menu" navbar>
-        {this.props.menu.map((entry, key) => {
-          let anchor = "#" + entry.ref;
-          return (
-            <NavItem key={key}>
-              <NavLink
-                className={classNames({ active: anchor === this.state.anchor })}
-                onClick={() => {
-                  // Go to element.
-                  goToAnchor(anchor, true);
-                  // Set active anchor.
-                  this.setAnchor(anchor);
-                  // Execute callback.
-                  this.props.callback();
-                }}
-              >
-                {anchor === this.state.anchor ? (
-                  <span>~/{entry.name}</span>
-                ) : (
-                  <React.Fragment>
-                    <span className="long">~/{entry.name}</span>
-                    <span className="short">
-                      ~/{this.getInitials(entry.name)}&#8230;
-                    </span>
-                  </React.Fragment>
-                )}
-              </NavLink>
-            </NavItem>
-          );
-        })}
+        {menu &&
+          menu.map((entry, key) => {
+            let anchor = "#" + entry.ref
+            return (
+              <NavItem key={key}>
+                <NavLink
+                  className={classNames({
+                    active: anchor === this.state.anchor,
+                  })}
+                  onClick={() => {
+                    // Go to element.
+                    goToAnchor(anchor, true)
+                    // Set active anchor.
+                    this.setAnchor(anchor)
+                    // Execute callback.
+                    this.props.callback()
+                  }}
+                >
+                  {anchor === this.state.anchor ? (
+                    <span>~/{entry.name}</span>
+                  ) : (
+                    <>
+                      <span className="long">~/{entry.name}</span>
+                      <span className="short">
+                        ~/{this.getInitials(entry.name)}&#8230;
+                      </span>
+                    </>
+                  )}
+                </NavLink>
+              </NavItem>
+            )
+          })}
       </Nav>
-    );
+    )
   }
 }
 
 Menu.propTypes = {
   menu: PropTypes.array,
-  callback: PropTypes.func
-};
+  callback: PropTypes.func,
+}
 
-export default Menu;
+export default Menu

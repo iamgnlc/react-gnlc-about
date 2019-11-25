@@ -1,5 +1,5 @@
 {
-  "name": "cv",
+  "name": "me-gnlc-about",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://about.gnlc.me/",
@@ -49,11 +49,11 @@
     "react-test-renderer": "^16.8.2"
   },
   "reactSnap": {
-    "inlineCss": true,
     "include": [
       "/",
       "/showAll/"
-    ]
+    ],
+    "inlineCss": true
   },
   "browserslist": [
     ">0.2%",

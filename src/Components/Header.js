@@ -1,45 +1,45 @@
-import React, { PureComponent } from "react";
-import PropTypes from "prop-types";
-import { goToTop } from "react-scrollable-anchor";
+import React, { PureComponent } from "react"
+import PropTypes from "prop-types"
+import { goToTop } from "react-scrollable-anchor"
 
-import { FaEllipsisV } from "react-icons/fa";
-import { FaTimes } from "react-icons/fa";
-import { Collapse, Navbar, NavbarBrand, NavbarToggler } from "reactstrap";
+import { FaEllipsisV } from "react-icons/fa"
+import { FaTimes } from "react-icons/fa"
+import { Collapse, Navbar, NavbarBrand, NavbarToggler } from "reactstrap"
 
-import Menu from "./Menu.js";
-import Avatar from "./Avatar.js";
+import Menu from "./Menu.js"
+import Avatar from "./Avatar.js"
 
 class Header extends PureComponent {
   constructor(props) {
-    super(props);
+    super(props)
 
     // Reference child.
-    this.menuRef = React.createRef();
+    this.menuRef = React.createRef()
 
     this.state = {
-      isOpen: false
-    };
+      isOpen: false,
+    }
   }
 
-  callback = params => {
-    this.closeNav();
-  };
+  callback = (params) => {
+    this.closeNav()
+  }
 
   closeNav = () => {
-    if (this.state.isOpen) this.toggleNav();
-  };
+    if (this.state.isOpen) this.toggleNav()
+  }
 
   toggleNav = () => {
     this.setState({
-      isOpen: !this.state.isOpen
-    });
-  };
+      isOpen: !this.state.isOpen,
+    })
+  }
 
   toTop = () => {
-    goToTop();
+    goToTop()
     // Call child function.
-    this.menuRef.current.setAnchor(false);
-  };
+    this.menuRef.current.setAnchor(false)
+  }
 
   render() {
     return (
@@ -64,12 +64,12 @@ class Header extends PureComponent {
           />
         </Collapse>
       </Navbar>
-    );
+    )
   }
 }
 
 Header.propTypes = {
-  menu: PropTypes.array
-};
+  menu: PropTypes.array,
+}
 
-export default Header;
+export default Header

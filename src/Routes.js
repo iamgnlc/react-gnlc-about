@@ -13,7 +13,7 @@ const Routes = React.memo(() => {
     <Router basename={basename}>
       <Switch>
         <Route path="/" exact component={App} />
-        <Route path="/showAll" render={() => <App contacts={true} />} />
+        <Route path="/showAll/" render={() => <App contacts={true} />} />
         <Route component={NoMatch} />
       </Switch>
     </Router>

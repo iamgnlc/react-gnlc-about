@@ -28,6 +28,8 @@ const cloud = [
   { text: "HAML ", value: 4 },
   { text: "Foundation ", value: 4 },
   { text: "Bootstrap ", value: 5 },
+  { text: "Apollo ", value: 4 },
+  { text: "GraphQL ", value: 5 },
   { text: "Git", value: 10 },
   { text: "SFTP", value: 2 },
   { text: "FTP", value: 2 },
